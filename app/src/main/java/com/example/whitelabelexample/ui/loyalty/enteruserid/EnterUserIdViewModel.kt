@@ -14,7 +14,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.terrakok.cicerone.Router
 
-
 class EnterUserIdViewModel(
     private val validateUserIdUseCase: ValidateUserIdUseCase,
     private val getUserIdParamsUseCase: GetUserIdParamsUseCase,

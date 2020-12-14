@@ -119,6 +119,3 @@ class CardInfoFragment : Fragment() {
         }
     }
 }
-
-fun Mask.format(string: String) =
-    apply(CaretString(string, 0), false).formattedText.string
