@@ -6,9 +6,7 @@ import com.example.whitelabelexample.common.delegates.AdapterDelegateType
 import com.example.whitelabelexample.common.delegates.SimpleAdapterDelegate
 import com.example.whitelabelexample.ui.getcard.model.FieldItem
 
-abstract class BaseFieldAdapterDelegate(adapterDelegateType: AdapterDelegateType) : SimpleAdapterDelegate(adapterDelegateType) {
-    var isInputEnabled = true
-}
+abstract class BaseFieldAdapterDelegate(adapterDelegateType: AdapterDelegateType) : SimpleAdapterDelegate(adapterDelegateType)
 
 abstract class BaseFieldViewHolder(
     itemView: View,

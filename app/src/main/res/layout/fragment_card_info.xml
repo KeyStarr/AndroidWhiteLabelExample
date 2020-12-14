@@ -1,160 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.whitelabelexample.common.views.BetterViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_info_animator"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_info_content_swipe_refresh_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+    android:layout_height="match_parent">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/card_info_content_swipe_refresh_container"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipChildren="false">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/background"
-            android:clipChildren="false">
+        <TextView
+            android:id="@+id/card_info_status_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/card_info_status_label_text"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Medium.Tertiary.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/card_info_status_label_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/card_info_status_label_text"
-                android:textAllCaps="true"
-                android:textAppearance="@style/Medium.Tertiary.18"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/card_info_status_value_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bold.Tertiary.18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_info_status_label_text_view"
+            app:layout_constraintTop_toTopOf="@id/card_info_status_label_text_view"
+            tools:text="Золото" />
 
-            <TextView
-                android:id="@+id/card_info_status_value_text_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="end"
-                android:textAllCaps="true"
-                android:textAppearance="@style/Bold.Tertiary.18"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/card_info_status_label_text_view"
-                app:layout_constraintTop_toTopOf="@id/card_info_status_label_text_view"
-                tools:text="Золото" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_info_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_info_status_value_text_view"
+            app:layout_goneMarginTop="@dimen/card_info_status_margin_top">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_info_card_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_info_status_value_text_view"
-                app:layout_goneMarginTop="@dimen/card_info_status_margin_top">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/card_info_card_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brand_card_info"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/card_info_card_image"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/brand_card_info"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/card_info_discount_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAppearance="@style/Bold.Secondary"
+                    android:textSize="70sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/card_info_card_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="@string/card_info_discount_percent_text"
+                    tools:visibility="visible" />
 
-                    <TextView
-                        android:id="@+id/card_info_discount_text_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginBottom="16dp"
-                        android:textAppearance="@style/Bold.Secondary"
-                        android:textSize="70sp"
-                        android:visibility="gone"
-                        app:layout_constraintBottom_toBottomOf="@id/card_info_card_image"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:text="@string/card_info_discount_percent_text"
-                        tools:visibility="visible" />
+                <TextView
+                    android:id="@+id/card_info_discount_bonuses_word_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:textAppearance="@style/Bold.Secondary.24"
+                    app:layout_constraintBottom_toBottomOf="@id/card_info_discount_text_view"
+                    app:layout_constraintStart_toEndOf="@id/card_info_discount_text_view"
+                    tools:text="@plurals/card_info_bonuses_word" />
 
-                    <TextView
-                        android:id="@+id/card_info_discount_bonuses_word_text_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginBottom="14dp"
-                        android:textAppearance="@style/Bold.Secondary.24"
-                        app:layout_constraintBottom_toBottomOf="@id/card_info_discount_text_view"
-                        app:layout_constraintStart_toEndOf="@id/card_info_discount_text_view"
-                        tools:text="@plurals/card_info_bonuses_word" />
+                <TextView
+                    android:id="@+id/card_info_balance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="14dp"
+                    android:textAppearance="@style/Bold.Secondary.21"
+                    app:layout_constraintBottom_toBottomOf="@id/card_info_discount_text_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="@plurals/card_info_bonuses_word" />
 
-                    <TextView
-                        android:id="@+id/card_info_balance_text_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginBottom="14dp"
-                        android:textAppearance="@style/Bold.Secondary.21"
-                        app:layout_constraintBottom_toBottomOf="@id/card_info_discount_text_view"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        tools:text="@plurals/card_info_bonuses_word" />
+                <FrameLayout
+                    android:id="@+id/card_info_number_container"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:background="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_info_card_image" />
 
-                    <FrameLayout
-                        android:id="@+id/card_info_number_container"
-                        android:layout_width="0dp"
-                        android:layout_height="140dp"
-                        android:background="#fff"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/card_info_card_image" />
+                <ImageView
+                    android:id="@+id/card_info_barcode_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:contentDescription="@string/card_info_barcode_content_desc"
+                    app:layout_constraintDimensionRatio="4.5484"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/card_info_number_container"
+                    tools:background="#000" />
 
-                    <ImageView
-                        android:id="@+id/card_info_barcode_image"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
-                        android:contentDescription="@string/card_info_barcode_content_desc"
-                        app:layout_constraintDimensionRatio="4.5484"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/card_info_number_container"
-                        tools:background="#000" />
+                <TextView
+                    android:id="@+id/card_info_card_number_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/Regular.Primary.18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_info_barcode_image"
+                    tools:text="1231231231231321323123213213123213131233231212" />
 
-                    <TextView
-                        android:id="@+id/card_info_card_number_text_view"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="24dp"
-                        android:gravity="center_horizontal"
-                        android:textAppearance="@style/Regular.Primary.18"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/card_info_barcode_image"
-                        tools:text="1231231231231321323123213213123213131233231212" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <ProgressBar
-        android:id="@+id/card_info_progress_bar"
-        style="@style/ProgressBarStyle.Normal"
-        android:layout_gravity="center" />
-
-</com.example.whitelabelexample.common.views.BetterViewAnimator>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

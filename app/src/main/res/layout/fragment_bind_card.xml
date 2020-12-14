@@ -60,17 +60,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <ProgressBar
-            android:id="@+id/bind_card_progress_bar"
-            style="@style/ProgressBarStyle.Small"
-            android:layout_gravity="center"
-            app:layout_constraintTop_toTopOf="@id/bind_card_next_button"
-            app:layout_constraintBottom_toBottomOf="@id/bind_card_next_button"
-            app:layout_constraintEnd_toStartOf="@id/bind_card_next_button"
-            android:layout_marginEnd="12dp"
-            android:visibility="gone"/>
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/bind_card_next_button"
             style="@style/ColoredButton"

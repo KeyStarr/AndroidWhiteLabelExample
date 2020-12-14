@@ -18,14 +18,13 @@ import com.example.whitelabelexample.ui.getcard.recycler.delegates.TextFieldDele
 class FieldsRecyclerView(context: Context, attrs: AttributeSet?) : LeakSafeRecyclerView(context, attrs) {
 
     private lateinit var castedAdapter: SimpleDelegatesAdapter
-    private lateinit var delegates: SparseArrayCompat<SimpleAdapterDelegate>
 
     init {
         layoutManager = LinearLayoutManager(context)
     }
 
     fun initAdapter(onFieldInputChanged: (FieldItem) -> Unit) {
-        delegates = initDelegates(onFieldInputChanged)
+        val delegates = initDelegates(onFieldInputChanged)
         castedAdapter = SimpleDelegatesAdapter(delegates)
         adapter = castedAdapter
     }
@@ -39,13 +38,5 @@ class FieldsRecyclerView(context: Context, attrs: AttributeSet?) : LeakSafeRecyc
 
     fun swapItems(items: List<BaseDelegatesAdapterItem>) {
         castedAdapter.swapItems(items)
-    }
-
-    fun toggleInputAtChildren(enabled: Boolean){
-        for(i in 0..delegates.size()){
-            val delegate = delegates[delegates.keyAt(i)]
-            (delegate as BaseFieldAdapterDelegate).isInputEnabled = enabled
-        }
-        castedAdapter.notifyDataSetChanged()
     }
 }

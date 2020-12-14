@@ -4,8 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.config.GetCardConfig
 import com.example.whitelabelexample.domain.usecase.GenerateCardUseCase
-import com.example.whitelabelexample.ui.getcard.GetCardViewModel.ScreenState.Content
-import com.example.whitelabelexample.ui.getcard.GetCardViewModel.ScreenState.Loading
 import com.example.whitelabelexample.ui.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.getcard.model.UiGetCardFieldItemsFactory
 import com.example.whitelabelexample.ui.main.ProjectScreen
@@ -31,14 +29,10 @@ class GetCardViewModel(
         MutableLiveData<Boolean>().apply { value = false }
     }
 
-    val screenState by lazy { MutableLiveData<ScreenState>() }
+    val fieldsData by lazy { MutableLiveData<List<FieldItem>>() }
 
     init {
-        showFields()
-    }
-
-    private fun showFields() {
-        screenState.value = Content(fieldItems)
+        fieldsData.value = fieldItems
     }
 
     fun onFieldInputChanged(field: FieldItem) {
@@ -54,7 +48,6 @@ class GetCardViewModel(
 
     private fun generateVirtualCard() {
         launch {
-            screenState.value = Loading
             withContext(Dispatchers.IO) {
                 val fieldsMap = fieldItems.associateBy({ it.id }, { it.input })
                 generateCardUseCase(fieldsMap)
@@ -62,12 +55,5 @@ class GetCardViewModel(
             val screen = ProjectScreen.CardInfo()
             router.newRootScreen(screen)
         }
-    }
-
-    sealed class ScreenState {
-
-        object Loading : ScreenState()
-
-        class Content(val fields: List<FieldItem>) : ScreenState()
     }
 }

@@ -5,12 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.ext.*
-import com.example.whitelabelexample.common.mvvm.getViewModel
 import com.example.whitelabelexample.domain.models.Card
-import com.example.whitelabelexample.ui.cardinfo.CardInfoViewModel.ScreenState.*
 import com.example.whitelabelexample.ui.cardinfo.barcode.BarcodeEncoder
 import com.example.whitelabelexample.ui.cardinfo.barcode.ZxingBarcodeEncoder
 import com.redmadrobot.inputmask.helper.Mask
@@ -38,7 +35,7 @@ class CardInfoFragment : Fragment() {
     }
 
     private fun setStatusBar(){
-        val isLightStatusBar = context!!.getBool(R.bool.is_light_status_bar_on_screens_with_background)
+        val isLightStatusBar = requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
         activity?.setupStatusBarColor(R.color.background, isLightStatusBar)
     }
 
@@ -50,16 +47,7 @@ class CardInfoFragment : Fragment() {
     }
 
     private fun observeScreenState() {
-        viewModel.screenState.observe(this, Observer {
-            when (it) {
-                is Loading -> showLoading()
-                is Content -> showContent(it.card)
-            }
-        })
-    }
-
-    private fun showLoading() {
-        card_info_animator.visibleChildId = R.id.card_info_progress_bar
+        viewModel.cardData.observe(this, this::showContent)
     }
 
     private fun showContent(card: Card) {
@@ -68,7 +56,6 @@ class CardInfoFragment : Fragment() {
         setCardNumber(card.number)
         setBarcode(card.number)
         hideSwipeRefreshProgress()
-        card_info_animator.visibleChildId = R.id.card_info_content_swipe_refresh_container
     }
 
     private fun setStatus(status: String?) {

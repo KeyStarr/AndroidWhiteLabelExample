@@ -23,7 +23,8 @@ android {
             buildConfigField "String", VAR_USER_ID_REGEX, DEFAULT_PHONE_REGEX
 
             /* NO CARD */
-            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS, createJavaList(GENERATE_VIRTUAL)
+            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS, createJavaList(
+                    BIND_PHYSICAL, GENERATE_VIRTUAL)
 
             /* BIND CARD */
             buildConfigField "String", VAR_CARD_NUMBER_MASK, "\"[000] [0000] [0000] [0000] [0000]\""

@@ -7,6 +7,7 @@ import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.usecase.ValidateUserIdUseCase
 import com.example.whitelabelexample.domain.config.EnterUserIdConfig
 import com.example.whitelabelexample.domain.usecase.LoginUseCase
+import com.example.whitelabelexample.ui.getcard.GetCardViewModel
 import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,9 +25,6 @@ class EnterUserIdViewModel(
     private val registerMethod by lazy { configRep.userIdType() }
     private var lastCorrectUserId: String? = null
 
-    val screenState by lazy {
-        MutableLiveData<ScreenState>().apply { value = ScreenState.Input }
-    }
     val explanationResId by lazy {
         when (registerMethod) {
             UserIdType.PHONE -> R.string.enter_user_id_explanation_phone_number
@@ -50,21 +48,10 @@ class EnterUserIdViewModel(
     fun onNextClick() {
         lastCorrectUserId?.let {
             launch {
-                screenState.value = ScreenState.Loading
                 withContext(Dispatchers.IO) { loginUseCase(lastCorrectUserId!!) }
-                proceedToNext()
+                val screen = ProjectScreen.NoCard()
+                router.newRootScreen(screen)
             }
         }
-    }
-
-    private fun proceedToNext() {
-        screenState.value = ScreenState.Input
-        val screen = ProjectScreen.NoCard()
-        router.newRootScreen(screen)
-    }
-
-    sealed class ScreenState {
-        object Input : ScreenState()
-        object Loading : ScreenState()
     }
 }

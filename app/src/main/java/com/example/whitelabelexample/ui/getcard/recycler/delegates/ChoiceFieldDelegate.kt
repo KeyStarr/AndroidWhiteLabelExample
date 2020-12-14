@@ -29,7 +29,7 @@ class ChoiceFieldDelegate(
     ) {
         val item = items[position] as ChoiceFieldItem
         val vh = holder as ChoiceViewHolder
-        vh.bindTo(item, isInputEnabled)
+        vh.bindTo(item)
     }
 
     class ChoiceViewHolder(
@@ -39,14 +39,11 @@ class ChoiceFieldDelegate(
 
         private val nonEditableEditText = itemView.get_card_choice_non_editable_edit_text
 
-        fun bindTo(uiItem: ChoiceFieldItem, isInputEnabled: Boolean) {
+        fun bindTo(uiItem: ChoiceFieldItem) {
             nonEditableEditText.apply {
                 setHint(uiItem.hintRes)
                 setText(uiItem.getChosenOptionDisplayName())
-                toggleEnabled(isInputEnabled)
-                setOnClickListener {
-                    showPopup(uiItem)
-                }
+                setOnClickListener { showPopup(uiItem) }
             }
         }
 

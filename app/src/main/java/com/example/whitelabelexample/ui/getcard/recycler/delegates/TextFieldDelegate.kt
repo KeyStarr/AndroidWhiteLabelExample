@@ -27,7 +27,7 @@ class TextFieldDelegate(
     ) {
         val item = items[position] as TextFieldItem
         val vh = holder as TextViewHolder
-        vh.bindTo(item, isInputEnabled)
+        vh.bindTo(item)
     }
 
     class TextViewHolder(
@@ -38,10 +38,9 @@ class TextFieldDelegate(
         private val inputLayout = itemView.get_card_text_field_input_layout
         private val editText = itemView.get_card_text_field_input_edit_text
 
-        fun bindTo(item: TextFieldItem, isInputEnabled: Boolean) {
+        fun bindTo(item: TextFieldItem) {
             editText.clearTextChangedListeners()
             inputLayout.hint = itemView.context.getString(item.hintRes)
-            editText.isEnabled = isInputEnabled
             editText.inputType = item.inputType
             editText.setText(item.input)
             setTextWatcher(item)

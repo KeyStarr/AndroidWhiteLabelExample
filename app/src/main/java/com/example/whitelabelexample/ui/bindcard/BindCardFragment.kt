@@ -11,7 +11,6 @@ import com.example.whitelabelexample.common.ext.initBackButton
 import com.example.whitelabelexample.common.ext.onEndCallListener
 import com.example.whitelabelexample.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentBindCardBinding
-import com.example.whitelabelexample.ui.bindcard.BindCardViewModel.ScreenState.*
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import kotlinx.android.synthetic.main.fragment_bind_card.*
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -31,7 +30,6 @@ class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBind
         activity?.setupStatusBarColor(android.R.color.white, true)
         bind_card_toolbar.initBackButton(activity)
         setInputMask()
-        observeScreenState()
         bind_card_edit_text.onEndCallListener { viewModel.onNextButtonClick() }
     }
 
@@ -43,38 +41,6 @@ class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBind
             addTextChangedListener(inputMaskListener)
             onFocusChangeListener = inputMaskListener
         }
-    }
-
-    private fun observeScreenState() {
-        viewModel.screenState.observe(this, Observer {
-            when (it) {
-                ReadyInput -> setReadyInput()
-                Loading -> setLoading()
-            }
-        })
-    }
-
-    private fun setReadyInput() {
-        bind_card_input_layout.error = null
-        toggleProgress(false)
-        toggleInput(true)
-    }
-
-    private fun setLoading() {
-        bind_card_edit_text.hideKeyboard()
-        toggleInput(false)
-        toggleProgress(true)
-    }
-
-    private fun toggleInput(enabled: Boolean) {
-        bind_card_edit_text.isEnabled = enabled
-        bind_card_next_button.isEnabled =
-            if (!enabled) false
-            else viewModel.isNextButtonEnabled.value!!
-    }
-
-    private fun toggleProgress(enabled: Boolean) {
-        bind_card_progress_bar.isVisible = enabled
     }
 
     private inner class InputChangeListener : MaskedTextChangedListener.ValueListener {

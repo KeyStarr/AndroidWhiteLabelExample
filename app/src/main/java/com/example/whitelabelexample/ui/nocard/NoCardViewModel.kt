@@ -54,11 +54,11 @@ class NoCardViewModel(
 
     fun onBindCardClick() {
         val screen = ProjectScreen.BindCard()
-        router.newRootScreen(screen)
+        router.navigateTo(screen)
     }
 
     fun onGetVirtualCardClick() {
         val screen = ProjectScreen.GetCard()
-        router.newRootScreen(screen)
+        router.navigateTo(screen)
     }
 }

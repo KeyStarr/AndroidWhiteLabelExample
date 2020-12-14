@@ -35,7 +35,7 @@ class DateFieldDelegate(
     ) {
         val item = items[position] as DateFieldItem
         val vh = holder as DateViewHolder
-        vh.bindTo(item, isInputEnabled)
+        vh.bindTo(item)
     }
 
     class DateViewHolder(
@@ -45,11 +45,10 @@ class DateFieldDelegate(
 
         private val nonEditableEditText = itemView.get_card_date_non_editable_edit_text
 
-        fun bindTo(uiItem: DateFieldItem, isInputEnabled: Boolean) {
+        fun bindTo(uiItem: DateFieldItem) {
             nonEditableEditText.apply {
                 setHint(uiItem.hintRes)
                 setText(uiItem.input)
-                toggleEnabled(isInputEnabled)
                 setOnClickListener { showDatePicker(uiItem) }
             }
         }

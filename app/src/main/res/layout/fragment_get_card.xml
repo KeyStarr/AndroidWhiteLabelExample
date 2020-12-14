@@ -40,15 +40,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ProgressBar
-                    android:id="@+id/get_card_progress_bar"
-                    style="@style/ProgressBarStyle.Small"
-                    android:layout_marginEnd="12dp"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@id/get_card_next_button"
-                    app:layout_constraintEnd_toStartOf="@id/get_card_next_button"
-                    app:layout_constraintTop_toTopOf="@id/get_card_next_button" />
-
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/get_card_next_button"
                     style="@style/ColoredButton"

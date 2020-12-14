@@ -22,9 +22,6 @@ class BindCardViewModel(
     val cardNumberInputMask by lazy {
         configRep.cardNumberInputMask()
     }
-    val screenState by lazy {
-        MutableLiveData<ScreenState>().apply { value = ScreenState.ReadyInput }
-    }
     val isNextButtonEnabled by lazy{
         MutableLiveData<Boolean>().apply { value = false }
     }
@@ -32,12 +29,6 @@ class BindCardViewModel(
     fun onInputChange(maskFilled: Boolean, rawInput: String) {
         isNextButtonEnabled.value = maskFilled
         lastRawInput = rawInput
-        hideErrorIfNeed()
-    }
-
-    private fun hideErrorIfNeed(){
-        if (screenState.value != ScreenState.ReadyInput)
-            screenState.value = ScreenState.ReadyInput
     }
 
     fun onNextButtonClick(){
@@ -45,16 +36,8 @@ class BindCardViewModel(
     }
 
     private suspend fun bindPhysicalCard(number: String) {
-        screenState.value = ScreenState.Loading
         withContext(Dispatchers.IO) { bindCardUseCase(number) }
         val screen = ProjectScreen.CardInfo()
         router.newRootScreen(screen)
-    }
-
-    sealed class ScreenState{
-
-        object ReadyInput: ScreenState()
-
-        object Loading: ScreenState()
     }
 }
