@@ -3,7 +3,7 @@ package com.example.whitelabelexample.ui.getcard.recycler
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.delegates.AdapterDelegateType
 
-internal enum class FieldsAdapterTypes(
+enum class FieldsAdapterTypes(
     override val type: Int,
     override val viewHolderLayoutRes: Int
 ) : AdapterDelegateType {

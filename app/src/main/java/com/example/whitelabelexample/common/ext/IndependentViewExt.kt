@@ -187,7 +187,7 @@ fun View.animateFadeOutVisibility(durationMs: Long) {
     }
 }
 
-internal fun View.animateFadeIn(durationMs: Long, onEndCallback: (() -> Unit)? = null) {
+fun View.animateFadeIn(durationMs: Long, onEndCallback: (() -> Unit)? = null) {
     clearAnimation()
     val animation = animate()
         .alpha(1F)
@@ -199,7 +199,7 @@ internal fun View.animateFadeIn(durationMs: Long, onEndCallback: (() -> Unit)? =
     animation.start()
 }
 
-internal fun View.animateFadeOut(durationMs: Long, onEndCallback: (() -> Unit)? = null) {
+fun View.animateFadeOut(durationMs: Long, onEndCallback: (() -> Unit)? = null) {
     clearAnimation()
     val animation = animate()
         .alpha(0F)

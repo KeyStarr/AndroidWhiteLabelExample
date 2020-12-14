@@ -11,7 +11,7 @@ import com.example.whitelabelexample.ui.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.getcard.recycler.FieldsAdapterTypes
 import kotlinx.android.synthetic.main.get_card_choice_delegate_layout.view.*
 
-internal class ChoiceFieldDelegate(
+class ChoiceFieldDelegate(
     private val onFieldInputChanged: (FieldItem) -> Unit
 ) : BaseFieldAdapterDelegate(FieldsAdapterTypes.CHOICE) {
 

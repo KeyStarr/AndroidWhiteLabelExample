@@ -7,15 +7,18 @@ import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.usecase.ValidateUserIdUseCase
 import com.example.whitelabelexample.domain.config.EnterUserIdConfig
 import com.example.whitelabelexample.domain.usecase.LoginUseCase
+import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ru.terrakok.cicerone.Router
 
 
-internal class EnterUserIdViewModel(
+class EnterUserIdViewModel(
     private val configRep: EnterUserIdConfig,
     private val validateUserIdUseCase: ValidateUserIdUseCase,
-    private val loginUseCase: LoginUseCase
+    private val loginUseCase: LoginUseCase,
+    private val router: Router
 ) : BaseViewModel() {
 
     private val registerMethod by lazy { configRep.userIdType() }
@@ -49,14 +52,15 @@ internal class EnterUserIdViewModel(
             launch {
                 screenState.value = ScreenState.Loading
                 withContext(Dispatchers.IO) { loginUseCase(lastCorrectUserId!!) }
-                proceedToConfirmCode()
+                proceedToNext()
             }
         }
     }
 
-    private fun proceedToConfirmCode() {
+    private fun proceedToNext() {
         screenState.value = ScreenState.Input
-        // TODO: move on
+        val screen = ProjectScreen.NoCard()
+        router.newRootScreen(screen)
     }
 
     sealed class ScreenState {

@@ -5,13 +5,16 @@ import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.config.BindCardConfig
 import com.example.whitelabelexample.domain.repositories.net.CardNetRepository
 import com.example.whitelabelexample.domain.usecase.BindCardUseCase
+import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ru.terrakok.cicerone.Router
 
-internal class BindCardViewModel(
+class BindCardViewModel(
     private val configRep: BindCardConfig,
-    private val bindCardUseCase: BindCardUseCase
+    private val bindCardUseCase: BindCardUseCase,
+    private val router: Router
 ) : BaseViewModel() {
 
     private lateinit var lastRawInput: String
@@ -43,10 +46,9 @@ internal class BindCardViewModel(
 
     private suspend fun bindPhysicalCard(number: String) {
         screenState.value = ScreenState.Loading
-        withContext(Dispatchers.IO) {
-            bindCardUseCase(number)
-        }
-        // TODO: move
+        withContext(Dispatchers.IO) { bindCardUseCase(number) }
+        val screen = ProjectScreen.CardInfo()
+        router.newRootScreen(screen)
     }
 
     sealed class ScreenState{

@@ -6,11 +6,11 @@ import com.example.whitelabelexample.common.delegates.AdapterDelegateType
 import com.example.whitelabelexample.common.delegates.SimpleAdapterDelegate
 import com.example.whitelabelexample.ui.getcard.model.FieldItem
 
-internal abstract class BaseFieldAdapterDelegate(adapterDelegateType: AdapterDelegateType) : SimpleAdapterDelegate(adapterDelegateType) {
+abstract class BaseFieldAdapterDelegate(adapterDelegateType: AdapterDelegateType) : SimpleAdapterDelegate(adapterDelegateType) {
     var isInputEnabled = true
 }
 
-internal abstract class BaseFieldViewHolder(
+abstract class BaseFieldViewHolder(
     itemView: View,
     protected val onFieldInputChanged: (FieldItem) -> Unit
 ) : RecyclerView.ViewHolder(itemView)

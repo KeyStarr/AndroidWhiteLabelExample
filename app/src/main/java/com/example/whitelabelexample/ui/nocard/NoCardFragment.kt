@@ -13,7 +13,7 @@ import com.example.whitelabelexample.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentNoCardBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 
-internal class NoCardFragment : BaseBindingMvvmFragment<NoCardViewModel, FragmentNoCardBinding>() {
+class NoCardFragment : BaseBindingMvvmFragment<NoCardViewModel, FragmentNoCardBinding>() {
 
     override val viewModel: NoCardViewModel by viewModel()
 
@@ -35,7 +35,7 @@ internal class NoCardFragment : BaseBindingMvvmFragment<NoCardViewModel, Fragmen
 }
 
 @BindingAdapter(value = ["userId", "rationaleResId"])
-internal fun formatUserId(textView: TextView, userId: MutableLiveData<String>, rationaleResId: Int) {
+fun formatUserId(textView: TextView, userId: MutableLiveData<String>, rationaleResId: Int) {
     userId.value?.let {
         val message = textView.context.getString(rationaleResId, it)
         textView.text = Html.fromHtml(message)

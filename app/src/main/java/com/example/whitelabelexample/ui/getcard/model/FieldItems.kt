@@ -20,20 +20,20 @@ sealed class FieldItem(
     var isValid = false
 }
 
-internal class TextFieldItem(
+class TextFieldItem(
     id: String,
     hintRes: Int,
     val inputType: Int
 ) : FieldItem(id, hintRes, FieldsAdapterTypes.TEXT)
 
-internal class DateFieldItem(
+class DateFieldItem(
     id: String,
     hintRes: Int,
     val minPickerDate: Calendar,
     val maxPickerDate: Calendar
 ) : FieldItem(id, hintRes, FieldsAdapterTypes.DATE)
 
-internal class ChoiceFieldItem(
+class ChoiceFieldItem(
     id: String,
     hintRes: Int,
     val options: List<ChoiceOption>
@@ -48,7 +48,7 @@ internal class ChoiceFieldItem(
 }
 
 
-internal class ChoiceOption(
+class ChoiceOption(
     val serverName: String,
     val displayNameRes: Int
 )

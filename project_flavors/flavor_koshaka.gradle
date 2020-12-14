@@ -35,6 +35,7 @@ android {
 
             /* CARD INFO */
             buildConfigField BARCODE_TYPE_ENUM_TYPE, VAR_BARCODE_TYPE, CODE_128
+            buildConfigField SHOULD_CACHE_CARD_TYPE, VAR_SHOULD_CACHE_CARD, "false"
         }
     }
 }

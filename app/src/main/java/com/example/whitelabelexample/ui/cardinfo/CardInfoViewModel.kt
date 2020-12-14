@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-internal class CardInfoViewModel(
+class CardInfoViewModel(
     private val getCardUseCase: GetCardUseCase,
     private val configRep: CardInfoConfig
 ) : BaseViewModel() {

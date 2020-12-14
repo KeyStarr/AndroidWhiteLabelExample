@@ -9,7 +9,7 @@ import com.example.whitelabelexample.ui.getcard.recycler.FieldsAdapterTypes
 import com.example.whitelabelexample.ui.getcard.model.TextFieldItem
 import kotlinx.android.synthetic.main.get_card_text_delegate_layout.view.*
 
-internal class TextFieldDelegate(
+class TextFieldDelegate(
     private val onFieldInputChanged: (FieldItem) -> Unit
 ) : BaseFieldAdapterDelegate(FieldsAdapterTypes.TEXT) {
 

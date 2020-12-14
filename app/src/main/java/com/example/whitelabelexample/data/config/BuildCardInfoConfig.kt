@@ -10,7 +10,5 @@ class BuildCardInfoConfig : CardInfoConfig {
 
     override fun barcodeType(): BarcodeType = BuildConfig.BARCODE_TYPE
 
-    override fun shouldCacheCard(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun shouldCacheCard() = BuildConfig.SHOULD_CACHE_CARD
 }

@@ -15,7 +15,7 @@ import com.example.whitelabelexample.ui.getcard.recycler.delegates.ChoiceFieldDe
 import com.example.whitelabelexample.ui.getcard.recycler.delegates.DateFieldDelegate
 import com.example.whitelabelexample.ui.getcard.recycler.delegates.TextFieldDelegate
 
-internal class FieldsRecyclerView(context: Context, attrs: AttributeSet?) : LeakSafeRecyclerView(context, attrs) {
+class FieldsRecyclerView(context: Context, attrs: AttributeSet?) : LeakSafeRecyclerView(context, attrs) {
 
     private lateinit var castedAdapter: SimpleDelegatesAdapter
     private lateinit var delegates: SparseArrayCompat<SimpleAdapterDelegate>

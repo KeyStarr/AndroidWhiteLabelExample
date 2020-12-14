@@ -16,10 +16,9 @@ import com.example.whitelabelexample.ui.cardinfo.barcode.ZxingBarcodeEncoder
 import com.redmadrobot.inputmask.helper.Mask
 import com.redmadrobot.inputmask.model.CaretString
 import kotlinx.android.synthetic.main.fragment_card_info.*
-import kotlinx.android.synthetic.main.fragment_card_info_content_layout.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-internal class CardInfoFragment : Fragment() {
+class CardInfoFragment : Fragment() {
 
     private val viewModel: CardInfoViewModel by viewModel()
 

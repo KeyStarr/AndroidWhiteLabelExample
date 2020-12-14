@@ -60,7 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:onClick="@{(v)->viewmodel.onAttachCardClick()}"
+                    android:onClick="@{(v)->viewmodel.onBindCardClick()}"
                     android:text="@string/attach_card_button_text"
                     app:isVisible="@{viewmodel.isShowBindPlasticButton}" />
 

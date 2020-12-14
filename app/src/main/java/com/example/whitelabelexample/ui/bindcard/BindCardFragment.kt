@@ -16,7 +16,7 @@ import com.redmadrobot.inputmask.MaskedTextChangedListener
 import kotlinx.android.synthetic.main.fragment_bind_card.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-internal class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBindCardBinding>() {
+class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBindCardBinding>() {
 
     override val viewModel : BindCardViewModel by viewModel()
 

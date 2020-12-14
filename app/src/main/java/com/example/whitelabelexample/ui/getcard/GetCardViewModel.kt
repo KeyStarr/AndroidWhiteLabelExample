@@ -8,15 +8,18 @@ import com.example.whitelabelexample.ui.getcard.GetCardViewModel.ScreenState.Con
 import com.example.whitelabelexample.ui.getcard.GetCardViewModel.ScreenState.Loading
 import com.example.whitelabelexample.ui.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.getcard.model.UiGetCardFieldItemsFactory
+import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ru.terrakok.cicerone.Router
 
 
-internal class GetCardViewModel(
+class GetCardViewModel(
     private val generateCardUseCase: GenerateCardUseCase,
     private val configRep: GetCardConfig,
-    private val uiItemsFactory: UiGetCardFieldItemsFactory
+    private val uiItemsFactory: UiGetCardFieldItemsFactory,
+    private val router: Router
 ) : BaseViewModel() {
 
     private val fieldItems by lazy {
@@ -56,7 +59,8 @@ internal class GetCardViewModel(
                 val fieldsMap = fieldItems.associateBy({ it.id }, { it.input })
                 generateCardUseCase(fieldsMap)
             }
-            // TODO: move
+            val screen = ProjectScreen.CardInfo()
+            router.newRootScreen(screen)
         }
     }
 

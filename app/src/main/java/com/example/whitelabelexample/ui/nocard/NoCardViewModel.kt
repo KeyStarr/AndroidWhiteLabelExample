@@ -8,14 +8,17 @@ import com.example.whitelabelexample.domain.repositories.storage.UserIdStorageRe
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.config.NoCardConfig
 import com.example.whitelabelexample.domain.models.ObtainCardMethod
+import com.example.whitelabelexample.ui.main.ProjectScreen
 import com.redmadrobot.inputmask.helper.Mask
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ru.terrakok.cicerone.Router
 
-internal class NoCardViewModel(
+class NoCardViewModel(
     private val userIdRep: UserIdStorageRepository,
-    private val configRep: NoCardConfig
+    private val configRep: NoCardConfig,
+    private val router: Router
 ) : BaseViewModel() {
 
     private val cardObtainMethods by lazy {
@@ -49,11 +52,13 @@ internal class NoCardViewModel(
         Mask(it).format(value)
     } ?: value
 
-    fun onAttachCardClick() {
-        // TODO: move on
+    fun onBindCardClick() {
+        val screen = ProjectScreen.BindCard()
+        router.newRootScreen(screen)
     }
 
     fun onGetVirtualCardClick() {
-        // TODO: move on
+        val screen = ProjectScreen.GetCard()
+        router.newRootScreen(screen)
     }
 }

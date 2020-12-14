@@ -14,7 +14,7 @@ import com.example.whitelabelexample.ui.getcard.GetCardViewModel.ScreenState.Loa
 import kotlinx.android.synthetic.main.fragment_get_card.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-internal class GetCardFragment :
+class GetCardFragment :
     BaseBindingMvvmFragment<GetCardViewModel, FragmentGetCardBinding>() {
 
     override val viewModel: GetCardViewModel by viewModel()

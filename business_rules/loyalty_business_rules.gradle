@@ -60,6 +60,12 @@ ext.EAN_8 = BARCODE_TYPE_ENUM_TYPE + ".EAN_8"
 ext.EAN_13 = BARCODE_TYPE_ENUM_TYPE  + " .EAN_13"
 ext.CODE_128 = BARCODE_TYPE_ENUM_TYPE + ".CODE_128"
 
+/*________Should cache card________*/
+
+/*__Variable__*/
+ext.VAR_SHOULD_CACHE_CARD = "SHOULD_CACHE_CARD"
+ext.SHOULD_CACHE_CARD_TYPE = "boolean"
+
 /*_______________GET_CARD________________*/
 
 /*________Card fields________*/

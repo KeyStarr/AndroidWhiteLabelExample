@@ -13,7 +13,7 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter
 import java.util.*
 
-internal class DateFieldDelegate(
+class DateFieldDelegate(
     private val onFieldInputChanged: (FieldItem) -> Unit
 ) : BaseFieldAdapterDelegate(FieldsAdapterTypes.DATE) {
 

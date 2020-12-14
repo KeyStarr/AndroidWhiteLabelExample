@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_enter_user_id.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
-internal class EnterUserIdFragment :
+class EnterUserIdFragment :
     BaseBindingMvvmFragment<EnterUserIdViewModel, FragmentEnterUserIdBinding>() {
 
     override val viewModel: EnterUserIdViewModel by viewModel()
@@ -43,7 +43,8 @@ internal class EnterUserIdFragment :
     }
 
     private fun setStatusBar() {
-        val isLightStatusBar = requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
+        val isLightStatusBar =
+            requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
         activity?.setupStatusBarColor(R.color.background, isLightStatusBar)
     }
 
@@ -66,7 +67,7 @@ internal class EnterUserIdFragment :
         }
     }
 
-    private fun setOnEnterNextListener(){
+    private fun setOnEnterNextListener() {
         enter_user_id_input_edit_text.onEndCallListener {
             if (enter_user_id_next_button.isEnabled)
                 viewModel.onNextClick()
