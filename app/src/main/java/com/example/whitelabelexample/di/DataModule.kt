@@ -41,10 +41,7 @@ private fun Module.providePrefs() {
 }
 
 private fun Module.provideConfigs() {
-    single<BindCardConfig> { BuildBindCardConfig() }
-    single<CardInfoConfig> { BuildCardInfoConfig() }
-    single<EnterUserIdConfig> { BuildEnterUserIdConfig() }
-    single<GetCardConfig> { BuildGetCardConfig() }
-    single<NoCardConfig> { BuildNoCardConfig() }
+    single<CardConfig> { BuildCardConfig() }
+    single<UserIdConfig> { BuildUserIdConfig() }
     single<MainConfig> { BuildMainConfig() }
 }

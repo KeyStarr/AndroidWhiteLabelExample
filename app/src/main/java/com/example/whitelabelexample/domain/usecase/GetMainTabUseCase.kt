@@ -12,10 +12,10 @@ class GetMainTabUseCase(
 
     operator fun invoke(): NavigationTab {
         val mainTab = mainConfig.mainTab()
-        val module = tabsByModules.entries.find { it.value == mainTab }!!
-        val isModuleEnabled = BuildConfig.APP_MODULES.contains(module.key)
+        val mainModule = tabsByModules.entries.find { it.value == mainTab }!!.key
+        val isModuleEnabled = BuildConfig.APP_MODULES.contains(mainModule)
         if (isModuleEnabled.not()) {
-            throw IllegalStateException("Can't have a disabled module for main tab ($mainTab) - fix config!")
+            throw IllegalStateException("Can't use a tab ($mainTab) as main, it's module is disabled  - fix config!")
         }
         return mainTab
     }

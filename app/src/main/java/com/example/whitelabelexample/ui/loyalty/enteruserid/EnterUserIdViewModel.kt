@@ -3,9 +3,10 @@ package com.example.whitelabelexample.ui.loyalty.enteruserid
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.domain.config.CardConfig
+import com.example.whitelabelexample.domain.config.UserIdConfig
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.usecase.ValidateUserIdUseCase
-import com.example.whitelabelexample.domain.config.EnterUserIdConfig
 import com.example.whitelabelexample.domain.usecase.LoginUseCase
 import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
@@ -15,13 +16,13 @@ import ru.terrakok.cicerone.Router
 
 
 class EnterUserIdViewModel(
-    private val configRep: EnterUserIdConfig,
+    private val config: UserIdConfig,
     private val validateUserIdUseCase: ValidateUserIdUseCase,
     private val loginUseCase: LoginUseCase,
     private val router: Router
 ) : BaseViewModel() {
 
-    private val registerMethod by lazy { configRep.userIdType() }
+    private val registerMethod by lazy { config.type() }
     private var lastCorrectUserId: String? = null
 
     val explanationResId by lazy {
@@ -31,7 +32,7 @@ class EnterUserIdViewModel(
         }
     }
     val inputMethod by lazy { registerMethod.name }
-    val userIdInputMask by lazy { configRep.userIdInputMask() }
+    val userIdInputMask by lazy { config.mask() }
     var isNextButtonEnabled = MutableLiveData<Boolean>().apply { value = false }
 
     fun onInputChange(maskFilled: Boolean, input: String) {

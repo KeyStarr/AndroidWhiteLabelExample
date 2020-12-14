@@ -2,7 +2,7 @@ package com.example.whitelabelexample.ui.loyalty.getcard
 
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.GetCardConfig
+import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.usecase.GenerateCardUseCase
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.UiGetCardFieldItemsFactory
@@ -13,14 +13,14 @@ import kotlinx.coroutines.withContext
 import ru.terrakok.cicerone.Router
 
 class GetCardViewModel(
+    private val config: CardConfig,
     private val generateCardUseCase: GenerateCardUseCase,
-    private val configRep: GetCardConfig,
     private val uiItemsFactory: UiGetCardFieldItemsFactory,
     private val router: Router
 ) : BaseViewModel() {
 
     private val fieldItems by lazy {
-        val fields = configRep.getFields()
+        val fields = config.virtualFormFields()
         uiItemsFactory.create(fields)
     }
 

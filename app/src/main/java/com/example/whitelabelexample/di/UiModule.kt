@@ -30,5 +30,5 @@ private fun Module.provideViewModels() {
     viewModel { EnterUserIdViewModel(get(), get(), get(), get()) }
     viewModel { GetCardViewModel(get(), get(), get(), get()) }
     viewModel { MainViewModel(get(), get(), get(), get(), get()) }
-    viewModel { NoCardViewModel(get(), get(), get()) }
+    viewModel { NoCardViewModel(get(), get(), get(), get()) }
 }

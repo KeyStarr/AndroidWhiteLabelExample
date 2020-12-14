@@ -2,8 +2,8 @@ package com.example.whitelabelexample.ui.loyalty.cardinfo
 
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.models.Card
-import com.example.whitelabelexample.domain.config.CardInfoConfig
 import com.example.whitelabelexample.domain.usecase.GetCardUseCase
 import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.ZxingBarcodeTypesFactory
 import kotlinx.coroutines.Dispatchers
@@ -11,17 +11,17 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CardInfoViewModel(
-    private val getCardUseCase: GetCardUseCase,
-    private val configRep: CardInfoConfig
+    private val config: CardConfig,
+    private val getCardUseCase: GetCardUseCase
 ) : BaseViewModel() {
 
     val barcodeType by lazy {
         val factory = ZxingBarcodeTypesFactory()
-        val configType = configRep.barcodeType()
+        val configType = config.barcodeType()
         factory.create(configType)
     }
 
-    val cardMask by lazy { configRep.cardMask() }
+    val cardMask by lazy { config.numberMask() }
 
     val cardData by lazy { MutableLiveData<Card>() }
 

@@ -1,14 +1,13 @@
 package com.example.whitelabelexample.domain.usecase
 
-import com.example.whitelabelexample.domain.config.EnterUserIdConfig
-
+import com.example.whitelabelexample.domain.config.UserIdConfig
 
 class ValidateUserIdUseCase(
-    configRep: EnterUserIdConfig
+    configRep: UserIdConfig
 ) {
 
     private val regex by lazy {
-        configRep.inputRegex()?.let { Regex(it) }
+        configRep.regex()?.let { Regex(it) }
     }
 
     operator fun invoke(input: String) = regex?.let { input.matches(it) } ?: true
