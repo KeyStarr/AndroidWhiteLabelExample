@@ -2,11 +2,8 @@ package com.example.whitelabelexample.ui.bindcard
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isVisible
-import androidx.lifecycle.Observer
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.databinding.BaseBindingMvvmFragment
-import com.example.whitelabelexample.common.ext.hideKeyboard
 import com.example.whitelabelexample.common.ext.initBackButton
 import com.example.whitelabelexample.common.ext.onEndCallListener
 import com.example.whitelabelexample.common.ext.setupStatusBarColor

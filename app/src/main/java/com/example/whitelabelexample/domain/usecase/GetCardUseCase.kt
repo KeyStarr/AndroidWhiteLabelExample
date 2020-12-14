@@ -18,7 +18,7 @@ class GetCardUseCase(
                 storageRep.save(card)
                 card
             } catch (exception: Exception) {
-                return storageRep.get()
+                return storageRep.get()?.copy(status = "Из кэша")
             }
         } else {
             netRep.getCard()

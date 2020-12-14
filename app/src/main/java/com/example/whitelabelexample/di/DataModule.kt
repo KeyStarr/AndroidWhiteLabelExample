@@ -2,6 +2,7 @@ package com.example.whitelabelexample.di
 
 import androidx.preference.PreferenceManager
 import com.example.whitelabelexample.data.config.*
+import com.example.whitelabelexample.data.device.NetConnectionCheckerImpl
 import com.example.whitelabelexample.data.net.MockAuthNetRepository
 import com.example.whitelabelexample.data.net.MockCardNetRepository
 import com.example.whitelabelexample.data.pref.AuthTokenPreference
@@ -10,6 +11,7 @@ import com.example.whitelabelexample.data.pref.UserIdPreference
 import com.example.whitelabelexample.domain.config.*
 import com.example.whitelabelexample.domain.repositories.net.AuthNetRepository
 import com.example.whitelabelexample.domain.repositories.net.CardNetRepository
+import com.example.whitelabelexample.domain.repositories.net.NetConnectionChecker
 import com.example.whitelabelexample.domain.repositories.storage.AuthTokenStorageRepository
 import com.example.whitelabelexample.domain.repositories.storage.CardStorageRepository
 import com.example.whitelabelexample.domain.repositories.storage.UserIdStorageRepository
@@ -24,7 +26,8 @@ fun provideData() = module {
 
 private fun Module.provideNet() {
     single<AuthNetRepository> { MockAuthNetRepository() }
-    single<CardNetRepository> { MockCardNetRepository() }
+    single<CardNetRepository> { MockCardNetRepository(get()) }
+    single<NetConnectionChecker> { NetConnectionCheckerImpl(get()) }
 }
 
 private fun Module.providePrefs() {
