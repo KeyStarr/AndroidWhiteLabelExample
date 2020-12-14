@@ -1,12 +1,12 @@
 package com.example.whitelabelexample.di
 
-import com.example.whitelabelexample.ui.bindcard.BindCardViewModel
-import com.example.whitelabelexample.ui.cardinfo.CardInfoViewModel
-import com.example.whitelabelexample.ui.enteruserid.EnterUserIdViewModel
-import com.example.whitelabelexample.ui.getcard.GetCardViewModel
-import com.example.whitelabelexample.ui.getcard.model.UiGetCardFieldItemsFactory
+import com.example.whitelabelexample.ui.loyalty.bindcard.BindCardViewModel
+import com.example.whitelabelexample.ui.loyalty.cardinfo.CardInfoViewModel
+import com.example.whitelabelexample.ui.loyalty.enteruserid.EnterUserIdViewModel
+import com.example.whitelabelexample.ui.loyalty.getcard.GetCardViewModel
+import com.example.whitelabelexample.ui.loyalty.getcard.model.UiGetCardFieldItemsFactory
 import com.example.whitelabelexample.ui.main.MainViewModel
-import com.example.whitelabelexample.ui.nocard.NoCardViewModel
+import com.example.whitelabelexample.ui.loyalty.nocard.NoCardViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module

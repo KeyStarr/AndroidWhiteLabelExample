@@ -13,4 +13,6 @@
     <string name="card_gender_male">Мужской</string>
     <string name="card_gender_female">Женский</string>
     <string name="card_info_error_text">You did it!\nКарты нет по одной из причин:\n1) кэш выключен;\n2) нет сети, а кэш пустой.</string>
+    <string name="placeholder_shops">А здесь магазины!</string>
+    <string name="placeholder_showcase">Здесь новости!</string>
 </resources>

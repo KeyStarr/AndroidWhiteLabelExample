@@ -2,7 +2,7 @@ package com.example.whitelabelexample.ui.main
 
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.config.MainConfig
-import com.example.whitelabelexample.domain.models.MainScreen
+import com.example.whitelabelexample.domain.models.NavigationTab
 import com.example.whitelabelexample.domain.usecase.HasCardUseCase
 import com.example.whitelabelexample.domain.usecase.IsAuthorizedUseCase
 import ru.terrakok.cicerone.Router
@@ -14,24 +14,25 @@ class MainViewModel(
     private val hasCardUseCase: HasCardUseCase
 ) : BaseViewModel() {
 
-    val mainScreen = config.mainScreen()
+    val mainScreen = config.mainTab()
 
     init {
-        openStartScreen()
+        openTabScreen(mainScreen)
     }
 
-    private fun openStartScreen() {
-        when (mainScreen) {
-            MainScreen.CARD -> openCardScreen()
-            MainScreen.SHOWCASE -> openShowcaseScreen()
+    fun onTabClick(navigationTab: NavigationTab) {
+        openTabScreen(navigationTab)
+    }
+
+    private fun openTabScreen(navigationTab: NavigationTab) {
+        when (navigationTab) {
+            NavigationTab.CARD -> openCard()
+            NavigationTab.SHOWCASE -> openShowcase()
+            NavigationTab.SHOPS -> openShops()
         }
     }
 
-    fun onCardClick() {
-        openCardScreen()
-    }
-
-    private fun openCardScreen() {
+    private fun openCard() {
         val screen = if (isAuthorizedUseCase()) {
             if (hasCardUseCase()) {
                 ProjectScreen.CardInfo()
@@ -44,11 +45,13 @@ class MainViewModel(
         router.newRootScreen(screen)
     }
 
-    fun onShowcaseClick() {
-        openShowcaseScreen()
+    private fun openShowcase() {
+        val screen = ProjectScreen.Showcase()
+        router.newRootScreen(screen)
     }
 
-    private fun openShowcaseScreen(){
-
+    private fun openShops() {
+        val screen = ProjectScreen.Shops()
+        router.newRootScreen(screen)
     }
 }

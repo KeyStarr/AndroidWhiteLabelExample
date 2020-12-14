@@ -5,7 +5,7 @@
 
         <variable
             name="viewmodel"
-            type="com.example.whitelabelexample.ui.getcard.GetCardViewModel" />
+            type="com.example.whitelabelexample.ui.loyalty.getcard.GetCardViewModel" />
     </data>
 
     <LinearLayout
@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.whitelabelexample.ui.getcard.recycler.FieldsRecyclerView
+                <com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsRecyclerView
                     android:id="@+id/get_card_fields_recycler"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

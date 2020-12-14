@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="com.example.whitelabelexample.ui.enteruserid.EnterUserIdViewModel" />
+            type="com.example.whitelabelexample.ui.loyalty.enteruserid.EnterUserIdViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

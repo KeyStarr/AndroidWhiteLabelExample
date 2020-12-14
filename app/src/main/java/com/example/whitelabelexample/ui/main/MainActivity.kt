@@ -3,7 +3,7 @@ package com.example.whitelabelexample.ui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.domain.models.MainScreen
+import com.example.whitelabelexample.domain.models.NavigationTab
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinApiExtension
@@ -11,6 +11,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
+import java.lang.IllegalStateException
 
 @KoinApiExtension
 class MainActivity : AppCompatActivity(), KoinComponent {
@@ -32,8 +33,9 @@ class MainActivity : AppCompatActivity(), KoinComponent {
 
     private fun selectBottomNavStartScreen() {
         val startMenuId = when (viewModel.mainScreen) {
-            MainScreen.CARD -> R.id.bottom_menu_card
-            MainScreen.SHOWCASE -> R.id.bottom_menu_showcase
+            NavigationTab.CARD -> R.id.bottom_menu_card
+            NavigationTab.SHOWCASE -> R.id.bottom_menu_showcase
+            NavigationTab.SHOPS -> R.id.bottom_menu_shops
         }
         main_bottom_navigation.menu.findItem(startMenuId).isChecked = true
     }
@@ -51,10 +53,13 @@ class MainActivity : AppCompatActivity(), KoinComponent {
     }
 
     private fun onTabClickListener(itemId: Int) {
-        when (itemId) {
-            R.id.bottom_menu_card -> viewModel.onCardClick()
-            R.id.bottom_menu_showcase -> viewModel.onShowcaseClick()
+        val tab = when (itemId) {
+            R.id.bottom_menu_card -> NavigationTab.CARD
+            R.id.bottom_menu_showcase -> NavigationTab.SHOWCASE
+            R.id.bottom_menu_shops -> NavigationTab.SHOPS
+            else -> throw IllegalStateException("Unknown menu id $itemId")
         }
+        viewModel.onTabClick(tab)
     }
 
     override fun onResumeFragments() {

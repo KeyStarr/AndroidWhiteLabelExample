@@ -8,13 +8,15 @@ ext.APP_MODULES_LIST_TYPE = "java.util.List<" + APP_MODULES_ENUM_TYPE + ">"
 /*__Optional values__*/
 ext.LOYALTY = APP_MODULES_ENUM_TYPE + ".LOYALTY"
 ext.SHOWCASE = APP_MODULES_ENUM_TYPE + ".SHOWCASE"
+ext.SHOWCASE = APP_MODULES_ENUM_TYPE + ".SHOPS"
 
 /*________Main Screen________*/
 
 /*__Variable__*/
-ext.VAR_MAIN_SCREEN = "MAIN_SCREEN"
-ext.VAR_MAIN_SCREEN_TYPE = "com.example.whitelabelexample.domain.models.MainScreen"
+ext.VAR_MAIN_SCREEN = "MAIN_TAB"
+ext.VAR_MAIN_SCREEN_TYPE = "com.example.whitelabelexample.domain.models.NavigationTab"
 
 /*__Optional values__*/
 ext.MAIN_SCREEN_CARD = VAR_MAIN_SCREEN_TYPE + ".CARD"
 ext.MAIN_SCREEN_SHOWCASE = VAR_MAIN_SCREEN_TYPE + ".SHOWCASE"
+ext.MAIN_SCREEN_SHOPS = VAR_MAIN_SCREEN_TYPE + ".SHOPS"
