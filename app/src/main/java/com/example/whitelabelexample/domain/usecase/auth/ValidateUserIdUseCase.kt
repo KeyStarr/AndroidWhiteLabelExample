@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.domain.usecase
+package com.example.whitelabelexample.domain.usecase.auth
 
 import com.example.whitelabelexample.domain.config.UserIdConfig
 

@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.domain.usecase
+package com.example.whitelabelexample.domain.usecase.card
 
 import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.models.Card

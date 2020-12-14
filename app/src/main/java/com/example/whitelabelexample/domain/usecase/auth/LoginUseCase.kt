@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.domain.usecase
+package com.example.whitelabelexample.domain.usecase.auth
 
 import com.example.whitelabelexample.domain.repositories.storage.AuthTokenStorageRepository
 import com.example.whitelabelexample.domain.repositories.storage.UserIdStorageRepository

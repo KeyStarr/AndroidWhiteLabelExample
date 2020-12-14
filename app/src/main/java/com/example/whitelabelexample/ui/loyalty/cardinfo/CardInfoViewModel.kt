@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.models.Card
-import com.example.whitelabelexample.domain.usecase.GetCardUseCase
+import com.example.whitelabelexample.domain.usecase.card.GetCardUseCase
 import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.ZxingBarcodeTypesFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

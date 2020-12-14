@@ -3,11 +3,10 @@ package com.example.whitelabelexample.ui.loyalty.enteruserid
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.config.UserIdConfig
 import com.example.whitelabelexample.domain.models.UserIdType
-import com.example.whitelabelexample.domain.usecase.ValidateUserIdUseCase
-import com.example.whitelabelexample.domain.usecase.LoginUseCase
+import com.example.whitelabelexample.domain.usecase.auth.ValidateUserIdUseCase
+import com.example.whitelabelexample.domain.usecase.auth.LoginUseCase
 import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

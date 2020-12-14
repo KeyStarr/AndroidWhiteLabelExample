@@ -3,10 +3,10 @@ package com.example.whitelabelexample.ui.main
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.models.NavigationTab
 import com.example.whitelabelexample.domain.models.tabsByModules
-import com.example.whitelabelexample.domain.usecase.GetEnabledModulesUseCase
-import com.example.whitelabelexample.domain.usecase.GetMainTabUseCase
-import com.example.whitelabelexample.domain.usecase.HasCardUseCase
-import com.example.whitelabelexample.domain.usecase.IsAuthorizedUseCase
+import com.example.whitelabelexample.domain.usecase.main.GetEnabledModulesUseCase
+import com.example.whitelabelexample.domain.usecase.main.GetMainTabUseCase
+import com.example.whitelabelexample.domain.usecase.card.HasCardUseCase
+import com.example.whitelabelexample.domain.usecase.auth.IsAuthorizedUseCase
 import ru.terrakok.cicerone.Router
 
 class MainViewModel(

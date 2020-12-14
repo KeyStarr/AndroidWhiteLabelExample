@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.domain.usecase
+package com.example.whitelabelexample.domain.usecase.main
 
 import com.example.whitelabelexample.BuildConfig
 import com.example.whitelabelexample.domain.config.MainConfig

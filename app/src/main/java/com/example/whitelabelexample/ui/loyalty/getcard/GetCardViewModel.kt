@@ -3,7 +3,7 @@ package com.example.whitelabelexample.ui.loyalty.getcard
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.config.CardConfig
-import com.example.whitelabelexample.domain.usecase.GenerateCardUseCase
+import com.example.whitelabelexample.domain.usecase.card.GenerateCardUseCase
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.UiGetCardFieldItemsFactory
 import com.example.whitelabelexample.ui.main.ProjectScreen

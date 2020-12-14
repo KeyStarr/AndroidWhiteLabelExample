@@ -11,9 +11,9 @@ interface CardConfig {
 
     fun barcodeType(): BarcodeType
 
-    fun shouldCacheCard(): Boolean
+    fun obtainmentMethods(): List<ObtainCardMethod>
 
     fun virtualFormFields(): List<CardField>
 
-    fun obtainmentMethods(): List<ObtainCardMethod>
+    fun shouldCacheCard(): Boolean
 }
