@@ -11,4 +11,6 @@ fun provideDomain() = module {
     single { ValidateUserIdUseCase(get()) }
     single { HasCardUseCase(get()) }
     single { IsAuthorizedUseCase(get()) }
+    single { GetEnabledModulesUseCase(get()) }
+    single { GetMainTabUseCase(get()) }
 }

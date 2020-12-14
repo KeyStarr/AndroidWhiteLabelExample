@@ -7,5 +7,5 @@ interface MainConfig {
 
     fun mainTab(): NavigationTab
 
-    fun isModuleEnabled(module: ProjectModule): Boolean
+    fun enabledModules(): List<ProjectModule>
 }

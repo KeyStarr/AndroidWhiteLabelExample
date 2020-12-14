@@ -1,27 +1,33 @@
 package com.example.whitelabelexample.ui.main
 
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.MainConfig
 import com.example.whitelabelexample.domain.models.NavigationTab
+import com.example.whitelabelexample.domain.models.tabsByModules
+import com.example.whitelabelexample.domain.usecase.GetEnabledModulesUseCase
+import com.example.whitelabelexample.domain.usecase.GetMainTabUseCase
 import com.example.whitelabelexample.domain.usecase.HasCardUseCase
 import com.example.whitelabelexample.domain.usecase.IsAuthorizedUseCase
 import ru.terrakok.cicerone.Router
 
 class MainViewModel(
-    config: MainConfig,
     private val router: Router,
     private val isAuthorizedUseCase: IsAuthorizedUseCase,
-    private val hasCardUseCase: HasCardUseCase
+    private val hasCardUseCase: HasCardUseCase,
+    getEnabledModulesUseCase: GetEnabledModulesUseCase,
+    getMainTabUseCase: GetMainTabUseCase
 ) : BaseViewModel() {
 
-    val mainScreen = config.mainTab()
+    val enabledTabIds = getEnabledModulesUseCase().mapNotNull { tabsByModules[it]?.itemId }
+
+    val mainTab = getMainTabUseCase()
 
     init {
-        openTabScreen(mainScreen)
+        openTabScreen(mainTab)
     }
 
-    fun onTabClick(navigationTab: NavigationTab) {
-        openTabScreen(navigationTab)
+    fun onTabClick(itemId: Int) {
+        val tab = NavigationTab.values().find { it.itemId == itemId }!!
+        openTabScreen(tab)
     }
 
     private fun openTabScreen(navigationTab: NavigationTab) {
