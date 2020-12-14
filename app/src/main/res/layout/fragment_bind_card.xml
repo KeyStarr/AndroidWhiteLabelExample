@@ -1,0 +1,90 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.whitelabelexample.ui.bindcard.BindCardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bind_card_toolbar"
+            style="@style/WhiteToolbarStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Привязать карту" />
+
+        <TextView
+            android:id="@+id/bind_card_label_text_view"
+            style="@style/Bold.Primary.28"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/bind_card_title_text"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/bind_card_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bind_card_input_layout"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/bind_card_edit_text_hint"
+            app:layout_constraintTop_toBottomOf="@id/bind_card_label_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bind_card_edit_text"
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ProgressBar
+            android:id="@+id/bind_card_progress_bar"
+            style="@style/ProgressBarStyle.Small"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="@id/bind_card_next_button"
+            app:layout_constraintBottom_toBottomOf="@id/bind_card_next_button"
+            app:layout_constraintEnd_toStartOf="@id/bind_card_next_button"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bind_card_next_button"
+            style="@style/ColoredButton"
+            android:layout_width="140dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="@{viewmodel.isNextButtonEnabled}"
+            android:onClick="@{v -> viewmodel.onNextButtonClick()}"
+            android:text="@string/bind_card_next_button_text"
+            app:layout_constraintTop_toBottomOf="@id/bind_card_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

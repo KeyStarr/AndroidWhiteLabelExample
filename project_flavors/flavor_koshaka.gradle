@@ -1,0 +1,40 @@
+apply from: "$rootDir/project_flavors/flavors_common.gradle"
+apply from: "$rootDir/business_rules/loyalty_business_rules.gradle"
+apply from: "$rootDir/business_rules/app_business_rules.gradle"
+
+android {
+
+    productFlavors {
+
+        koshaka {
+            dimension APP_DIMENSION
+
+            resValue "string", "app_name", "Koshaka"
+            applicationId 'com.livetyping.koshaka'
+
+            /* MAIN SCREEN */
+            buildConfigField VAR_MAIN_SCREEN_TYPE, VAR_MAIN_SCREEN, MAIN_SCREEN_CARD
+
+            /* MODULES */
+            buildConfigField APP_MODULES_LIST_TYPE, VAR_APP_MODULES, createJavaList(LOYALTY, SHOWCASE)
+
+            /* REGISTRATION */
+            buildConfigField PATH_TO_USER_ID_TYPE_ENUM, VAR_USER_ID_TYPE, USER_ID_TYPE_PHONE
+            buildConfigField "String", VAR_USER_ID_MASK, DEFAULT_PHONE_MASK
+            buildConfigField "String", VAR_USER_ID_REGEX, DEFAULT_PHONE_REGEX
+
+            /* NO CARD */
+            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS, createJavaList(GENERATE_VIRTUAL)
+
+            /* BIND CARD */
+            buildConfigField "String", VAR_CARD_NUMBER_MASK, "\"[0000] [0000] [0000] [0000]\""
+
+            /* GET CARD */
+            buildConfigField CARD_FIELD_LIST_TYPE, VAR_GENERATE_CARD_FIELDS, createJavaList(
+                    FIRST_NAME, LAST_NAME, BIRTHDAY, GENDER)
+
+            /* CARD INFO */
+            buildConfigField BARCODE_TYPE_ENUM_TYPE, VAR_BARCODE_TYPE, CODE_128
+        }
+    }
+}

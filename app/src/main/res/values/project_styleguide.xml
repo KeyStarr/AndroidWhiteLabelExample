@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- OVERRIDE these colors in all flavors of app module
+     values shall be taken from zeplin styleguide, the names are matching -->
+
+    <color name="active">#68b881</color>
+    <color name="disabled">#daede0</color>
+    <!-- Choose either dark or light from design.
+    Applied to screen background on, for example, enter card, no card, card info. -->
+    <color name="background">#36363f</color>
+    <color name="field_dark">#f5f5f5</color>
+    <color name="text_light">#fff</color>
+    <color name="text_dark">#353535</color>
+    <!-- Искусственный цвет, в стайлгайде нету -->
+    <color name="text_tertiary">@color/text_light</color>
+    <color name="text_grey">#9a9a9a</color>
+    <color name="error">#b00020</color>
+    <color name="divider">#f0f0f0</color>
+    <color name="notifications_icon_fill">#68b881</color>
+</resources>

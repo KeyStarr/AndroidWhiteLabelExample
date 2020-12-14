@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ColoredButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColorPrimaryInverse">#ffffff</item>
+        <item name="android:textAppearance">@style/Bold.Secondary.14</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:backgroundTint">@color/colored_button_selector</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ErrorRetryButton" parent="ColoredButton">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:text">@string/error_retry_button_text</item>
+    </style>
+
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">#1A000000</item>
+    </style>
+
+    <style name="ClickableView">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="ClickableView.Rectangle">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ClickableView.Circle">
+        <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+    
+    <style name="TextViewButton" parent="ClickableView.Rectangle">
+        <item name="android:textColor">@color/active</item>
+    </style>
+</resources>

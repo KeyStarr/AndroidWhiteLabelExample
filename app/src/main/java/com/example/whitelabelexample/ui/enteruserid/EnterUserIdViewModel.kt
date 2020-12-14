@@ -1,0 +1,66 @@
+package com.example.whitelabelexample.ui.enteruserid
+
+import androidx.lifecycle.MutableLiveData
+import com.example.whitelabelexample.R
+import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.domain.models.UserIdType
+import com.example.whitelabelexample.domain.usecase.ValidateUserIdUseCase
+import com.example.whitelabelexample.domain.config.EnterUserIdConfig
+import com.example.whitelabelexample.domain.usecase.LoginUseCase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+
+internal class EnterUserIdViewModel(
+    private val configRep: EnterUserIdConfig,
+    private val validateUserIdUseCase: ValidateUserIdUseCase,
+    private val loginUseCase: LoginUseCase
+) : BaseViewModel() {
+
+    private val registerMethod by lazy { configRep.userIdType() }
+    private var lastCorrectUserId: String? = null
+
+    val screenState by lazy {
+        MutableLiveData<ScreenState>().apply { value = ScreenState.Input }
+    }
+    val explanationResId by lazy {
+        when (registerMethod) {
+            UserIdType.PHONE -> R.string.enter_user_id_explanation_phone_number
+            UserIdType.EMAIL -> R.string.enter_user_id_explanation_email
+        }
+    }
+    val inputMethod by lazy { registerMethod.name }
+    val userIdInputMask by lazy { configRep.userIdInputMask() }
+    var isNextButtonEnabled = MutableLiveData<Boolean>().apply { value = false }
+
+    fun onInputChange(maskFilled: Boolean, input: String) {
+        if (!maskFilled) {
+            isNextButtonEnabled.value = false
+            return
+        }
+        val isInputCorrect = validateUserIdUseCase(input)
+        if (isInputCorrect) lastCorrectUserId = input
+        isNextButtonEnabled.value = isInputCorrect
+    }
+
+    fun onNextClick() {
+        lastCorrectUserId?.let {
+            launch {
+                screenState.value = ScreenState.Loading
+                withContext(Dispatchers.IO) { loginUseCase(lastCorrectUserId!!) }
+                proceedToConfirmCode()
+            }
+        }
+    }
+
+    private fun proceedToConfirmCode() {
+        screenState.value = ScreenState.Input
+        // TODO: move on
+    }
+
+    sealed class ScreenState {
+        object Input : ScreenState()
+        object Loading : ScreenState()
+    }
+}

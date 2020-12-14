@@ -1,0 +1,77 @@
+/*_______________ENTER USER ID________________*/
+
+/*________User ID Type________*/
+
+/*__Variable__*/
+ext.VAR_USER_ID_TYPE = "USER_ID_TYPE"
+ext.PATH_TO_USER_ID_TYPE_ENUM = "com.example.whitelabelexample.domain.models.UserIdType"
+
+/*__Optional values__*/
+ext.USER_ID_TYPE_PHONE = PATH_TO_USER_ID_TYPE_ENUM + ".PHONE"
+ext.USER_ID_TYPE_EMAIL = PATH_TO_USER_ID_TYPE_ENUM + ".EMAIL"
+
+/*________User ID Regex________*/
+
+/*__Variable__*/
+ext.VAR_USER_ID_REGEX = "USER_ID_REGEX"
+
+/*__Optional values__*/
+ext.NO_USER_ID_REGEX = "null"
+ext.DEFAULT_PHONE_REGEX = "\"[+]{1}([0-9]{11})\""
+ext.DEFAULT_EMAIL_REGEX = "\"[a-zA-Z0-9+._%\\\\-]{1,256}@[a-zA-Z0-9][a-zA-Z0-9\\\\-]{0,64}(\\\\.[a-zA-Z][a-zA-Z\\\\-]{1,25})+\""
+
+/*________User ID mask________*/
+
+/*__Variable__*/
+ext.VAR_USER_ID_MASK = "USER_ID_MASK"
+
+/*__Optional values__*/
+ext.NO_USER_ID_MASK = "null"
+ext.DEFAULT_PHONE_MASK = "\"{+7} [000] [000]-[00]-[00]\""
+
+/*_______________NO CARD________________*/
+
+/*________Obtain card methods________*/
+
+/*__Variable__*/
+ext.VAR_OBTAIN_CARD_METHODS = "OBTAIN_CARD_METHODS"
+ext.OBTAIN_CARD_METHOD_ENUM_TYPE = "com.example.whitelabelexample.domain.models.ObtainCardMethod"
+ext.OBTAIN_CARD_METHOD_LIST_TYPE = "java.util.List<" + OBTAIN_CARD_METHOD_ENUM_TYPE + ">"
+
+/*__Optional values__*/
+ext.GENERATE_VIRTUAL = OBTAIN_CARD_METHOD_ENUM_TYPE + ".GENERATE_VIRTUAL"
+ext.BIND_PHYSICAL = OBTAIN_CARD_METHOD_ENUM_TYPE + " .BIND_PHYSICAL"
+
+/*_______________BIND_CARD________________*/
+
+/*________Card number input mask________*/
+ext.VAR_CARD_NUMBER_MASK = "CARD_NUMBER_MASK"
+
+/*_______________CARD_INFO________________*/
+
+/*________Barcode type________*/
+
+/*__Variable__*/
+ext.VAR_BARCODE_TYPE = "BARCODE_TYPE"
+ext.BARCODE_TYPE_ENUM_TYPE = "com.example.whitelabelexample.domain.models.BarcodeType"
+
+/*__Optional values__*/
+ext.EAN_8 = BARCODE_TYPE_ENUM_TYPE + ".EAN_8"
+ext.EAN_13 = BARCODE_TYPE_ENUM_TYPE  + " .EAN_13"
+ext.CODE_128 = BARCODE_TYPE_ENUM_TYPE + ".CODE_128"
+
+/*_______________GET_CARD________________*/
+
+/*________Card fields________*/
+
+/*__Variable__*/
+ext.VAR_GENERATE_CARD_FIELDS= "GENERATE_CARD_FIELDS"
+ext.CARD_FIELD_ENUM_TYPE = "com.example.whitelabelexample.domain.models.CardField"
+ext.CARD_FIELD_LIST_TYPE = "java.util.List<" + CARD_FIELD_ENUM_TYPE + ">"
+
+/*__Optional values__*/
+ext.FIRST_NAME = CARD_FIELD_ENUM_TYPE + ".FIRST_NAME"
+ext.LAST_NAME = CARD_FIELD_ENUM_TYPE + ".LAST_NAME"
+ext.BIRTHDAY = CARD_FIELD_ENUM_TYPE + ".BIRTHDAY"
+ext.GENDER = CARD_FIELD_ENUM_TYPE + ".GENDER"
+ext.EMAIL = CARD_FIELD_ENUM_TYPE + ".EMAIL"

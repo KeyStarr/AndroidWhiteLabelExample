@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!--design-->
+    <!--схема использования цветов
+    https://www.figma.com/file/cIE02aUJ0dZvb9cSEdsbgJq4/Colors?node-id=0%3A1-->
+    <!--design-->
+    <color name="colorPrimary">@color/active
+    </color> <!--основной цвет - тулбар, выбранный таб, выбранный элемент шторки-->
+    <color name="colorPrimaryDark">@color/active</color>
+    <color name="colorAccent">@color/active
+    </color><!--акцентный цвет - выделенный таб, colored кнопки, FAB, ссылки, кнопка в snackbar, хэдеры и кнопки в пикерах,   -->
+    <color name="colorTextPrimary">@color/text_dark
+    </color><!--цвет текста в полях ввода, названий в меню шторки, спиннерах, текста на обычных кнопках, невыбранные данные в пикерах-->
+    <color name="colorTextPrimaryDisabled">#61000000</color><!--disable текст-->
+    <color name="colorDisableOnlyText">#DE000000
+    </color>     <!--текст тайтлов свитчей, радиобаттонов и т.д.-->
+    <color name="colorDisableDisableOnlyText">#61000000</color><!--disable тайтлы свитчей..-->
+    <color name="colorTextPrimaryInverse">@color/text_light
+    </color><!--Инверсия основного текста (текст colored кнопок)-->
+    <color name="colorTextSecondary">@color/text_light
+    </color><!--неактивные иконки боттомбара, шторки, счетчик символов текста, дни недели и minor часы в пикере.-->
+    <color name="colorTextSecondaryDisabled">#DAEDE0</color><!---->
+    <color name="colorTextSecondaryInverse">#5AACACAC</color><!---->
+    <color name="textColorHint">#99000000</color><!---->
+    <color name="colorControlNormal">#51191919
+    </color><!--цвет рамки текстовых полей, пустых чекбоксов-->
+    <color name="colorControlActivated">@color/active
+    </color><!--цвет выбранных текстовых полей, чекбоксов, тоглов, прогрессбаров, выделения даты и времени-->
+    <color name="colorControlHighlight">#1268B881
+    </color><!--цвет селекторов, выделенных элементов меню и т.д., обычно полупрозрачный от Accent color -->
+    <color name="colorButtonNormal">@color/active</color><!--цвет обычных raised кнопок-->
+
+    <color name="colorWindowBackground">@color/disabled</color><!---->
+    <color name="backgroundColor">@color/background</color><!---->
 </resources>

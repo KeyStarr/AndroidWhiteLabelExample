@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">WhiteLabelExample</string>
+    <string name="unknown_exception_msg_short">Неизвестная ошибка</string>
+    <string name="unknown_exception_msg_full">Неизвестная ошибка. Попробуйте повторить позже</string>
+    <string name="no_internet_exception_msg_short">Нет соединения с интернетом</string>
+    <string name="no_internet_exception_msg_full">Не удалось загрузить данные. Проверьте соединение с интернетом</string>
+    <string name="error_retry_button_text">Повторить</string>
+
+    <string name="card_first_name">Имя</string>
+    <string name="card_last_name">Фамилия</string>
+    <string name="card_birthday">Дата рождения</string>
+    <string name="card_gender">Пол</string>
+    <string name="card_email">E-mail</string>
+    <string name="card_gender_male">Мужской</string>
+    <string name="card_gender_female">Женский</string>
 </resources>

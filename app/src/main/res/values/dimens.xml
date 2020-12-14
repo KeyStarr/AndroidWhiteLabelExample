@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="in_card_content_margin">16dp</dimen>
+    <dimen name="confirm_code_progress_bar_height">52dp</dimen>
+    <dimen name="card_info_status_margin_top">40dp</dimen>
+    <item name="user_id_input_field_vertical_bias" type="dimen" format="float">0.88</item>
+
+    <dimen name="default_button_height">56dp</dimen>
+    <dimen name="error_top_view_height">44dp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_menu_card"
+        android:icon="@drawable/ic_card"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/bottom_menu_showcase"
+        android:icon="@drawable/ic_showcase"
+        tools:ignore="MenuTitle" />
+</menu>

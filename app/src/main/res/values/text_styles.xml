@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Regular">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Bold">
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="Medium">
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <!--_________________________________COLOR_________________________________-->
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Bold.Primary">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Medium.Primary">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Regular.Secondary">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Bold.Secondary">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Medium.Secondary">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary">
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <style name="Bold.Tertiary">
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <style name="Medium.Tertiary">
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <!--___________________________Grey___________________________-->
+    <style name="Regular.Grey">
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="Bold.Grey">
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="Medium.Grey">
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <!--___________________________Error___________________________-->
+    <style name="Regular.Error">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="Bold.Error">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="Medium.Error">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <!--_________________________________SIZE_________________________________-->
+    <!--_______________________________14sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Bold.Primary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Medium.Primary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Bold.Secondary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--___________________________Error___________________________-->
+    <style name="Medium.Error.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--_______________________________16sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Bold.Primary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Medium.Primary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Regular.Secondary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Bold.Secondary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Medium.Secondary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--___________________________Grey___________________________-->
+    <style name="Medium.Grey.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--_______________________________18sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Bold.Primary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Medium.Primary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--___________________________Grey___________________________-->
+    <style name="Medium.Grey.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Regular.Secondary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Bold.Secondary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Medium.Secondary.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--_______________________________20sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Bold.Primary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Medium.Primary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--_______________________________21sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Bold.Primary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Medium.Primary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Regular.Secondary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+    <style name="Bold.Secondary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+    <style name="Medium.Secondary.21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+
+    <!--_______________________________24sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Bold.Primary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Medium.Primary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--___________________________Secondary___________________________-->
+    <style name="Regular.Secondary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Bold.Secondary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Medium.Secondary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--_______________________________28sp_________________________________-->
+
+    <!--___________________________Primary___________________________-->
+    <style name="Regular.Primary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Bold.Primary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Medium.Primary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <!--___________________________Tertiary___________________________-->
+    <style name="Regular.Tertiary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Bold.Tertiary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Medium.Tertiary.28">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+</resources>

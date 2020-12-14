@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.whitelabelexample.ui.nocard.NoCardViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:clipChildren="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="26dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/no_card_phone_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Medium.Tertiary.21"
+                    app:rationaleResId="@{viewmodel.rationaleMsgResId}"
+                    app:userId="@{viewmodel.userId}"
+                    tools:text="К номеру +7 962 043-23-43 не привязано ни одной карты" />
+
+                <ImageView
+                    android:id="@+id/no_card_brand_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/brand_card_short" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/no_card_attach_card_text"
+                    android:textAppearance="@style/Medium.Tertiary.16" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/no_card_bind_plastic_button"
+                    style="@style/ColoredButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:onClick="@{(v)->viewmodel.onAttachCardClick()}"
+                    android:text="@string/attach_card_button_text"
+                    app:isVisible="@{viewmodel.isShowBindPlasticButton}" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/no_card_get_virtual_button"
+                    style="@style/ColoredButton"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:onClick="@{(v)->viewmodel.onGetVirtualCardClick()}"
+                    android:text="@string/get_card_button_text"
+                    app:isVisible="@{viewmodel.isShowGetVirtualButton}" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

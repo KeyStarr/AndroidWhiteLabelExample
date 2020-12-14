@@ -1,0 +1,59 @@
+<resources>
+    <string name="no_input_mask"></string>
+
+    <!-- Resources that must/can be overriden -->
+    <string name="brand_name">Лояка</string>
+
+    <!-- No card-->
+    <string name="no_card_for_phone_number_text">К номеру &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
+    <string name="no_card_for_email_number_text">К email-адресу &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
+    <string name="no_card_attach_card_text">Привяжите пластиковую карту, если она у вас есть, или заведите виртуальную. Пусть карта всегда будет с вами!</string>
+    <string name="attach_card_button_text">Привязать пластиковую карту</string>
+    <string name="get_card_button_text">Получить виртуальную карту</string>
+    <string name="next_button_text">Далее</string>
+
+    <!-- Enter UserId -->
+    <string name="enter_user_id_title">Карта</string>
+    <string name="enter_user_id_my_card">Моя карта</string>
+    <string name="enter_user_id_explanation_phone_number">Введите номер телефона, чтобы привязать или получить дисконтную карту</string>
+    <string name="enter_user_id_explanation_email">Введите адрес email, чтобы привязать или получить дисконтную карту</string>
+    <string name="enter_user_id_done_button_text">Далее</string>
+
+    <!-- Confirm code-->
+    <string name="confirm_explanation_phone">Мы отправили вам СМС с кодом</string>
+    <string name="confirm_explanation_email">Мы отправили вам email-сообщение с кодом</string>
+    <string name="confirm_retry_send_code"><u>Отправить код повторно</u></string>
+    <string name="confirm_wrong_code_error_message">Неверный код</string>
+    <string name="confirm_retry_cooldown_message">Отправить код повторно можно будет через %1$s</string>
+    <string name="confirm_time_left_hours">%1$d ч</string>
+    <string name="confirm_time_left_minutes">%1$d мин</string>
+    <string name="confirm_time_left_seconds">%1$d сек</string>
+    <string name="confirm_code_too_many_attempts_error_msg">Количество попыток превышено</string>
+
+    <!-- Get virtual card -->
+    <string name="get_card_next_button_text">Далее</string>
+    <string name="get_card_form_invalid_error">Одно или больше полей заполнены некорректно</string>
+    <string name="get_card_gender_empty">""</string>
+
+
+    <!-- Bind card -->
+    <string name="bind_card_title_text">Введите номер карты</string>
+    <string name="bind_card_edit_text_hint">Номер карты</string>
+    <string name="bind_card_next_button_text">Далее</string>
+    <string name="bind_card_wrong_number_error">Неверный номер карты</string>
+
+    <!-- Card info -->
+    <string name="card_info_status_label_text">Статус карты</string>
+    <string name="card_info_discount_percent_text">%1$d%%</string>
+    <string name="card_info_balance_at_balance_text">%1$d %2$s</string>
+    <plurals name="card_info_bonuses_word">
+        <item quantity="zero">бонусов</item>
+        <item quantity="one">бонус</item>
+        <item quantity="two">бонуса</item>
+        <item quantity="few">бонусов</item>
+        <item quantity="many">бонусов</item>
+        <item quantity="other">бонусов</item>
+    </plurals>
+    <string name="card_info_barcode_content_desc">Штрихкод, в котором закодирован код Вашей карты</string>
+    <string name="card_info_barcode_encoding_fail">Не удалось сформировать штрихкод карты</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.whitelabelexample.ui.getcard.views.NonEditableEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/get_card_choice_non_editable_edit_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp" />

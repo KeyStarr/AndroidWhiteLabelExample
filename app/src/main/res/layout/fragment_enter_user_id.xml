@@ -1,0 +1,152 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.whitelabelexample.ui.enteruserid.EnterUserIdViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/enter_user_id_title_text_view"
+            style="@style/Bold.Tertiary.28"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_user_id_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/enter_user_id_content_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_user_id_title_text_view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/enter_user_id_card_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brand_card"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/Bold.Secondary.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/in_card_content_margin"
+                    android:layout_marginEnd="@dimen/in_card_content_margin"
+                    android:text="@string/enter_user_id_my_card"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toTopOf="@id/enter_user_id_brand_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.103" />
+
+                <TextView
+                    android:id="@+id/enter_user_id_brand_name"
+                    style="@style/Bold.Secondary.24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/in_card_content_margin"
+                    android:layout_marginEnd="@dimen/in_card_content_margin"
+                    android:text="@string/brand_name"
+                    app:layout_constraintBottom_toBottomOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintVertical_bias="0.2"
+                    tools:text="Хрустальная туфелька" />
+
+                <TextView
+                    android:id="@+id/enter_user_id_explanation"
+                    style="@style/Medium.Secondary.18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/in_card_content_margin"
+                    android:layout_marginEnd="@dimen/in_card_content_margin"
+                    android:text="@{viewmodel.explanationResId}"
+                    app:layout_constraintBottom_toBottomOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintVertical_bias="0.471"
+                    tools:text="@string/enter_user_id_explanation_phone_number" />
+
+                <EditText
+                    android:id="@+id/enter_user_id_input_edit_text"
+                    style="@style/Medium.Primary.20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/in_card_content_margin"
+                    android:layout_marginEnd="@dimen/in_card_content_margin"
+                    android:background="@drawable/user_id_bkg"
+                    app:layout_constraintBottom_toBottomOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/enter_user_id_card_image_view"
+                    app:layout_constraintVertical_bias="@dimen/user_id_input_field_vertical_bias"
+                    app:userIdType="@{viewmodel.inputMethod}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/enter_user_id_next_button_left_constraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ProgressBar
+            android:id="@+id/enter_user_id_progress_bar"
+            style="@style/ProgressBarStyle.Small"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/enter_user_id_next_button"
+            app:layout_constraintEnd_toStartOf="@id/enter_user_id_next_button"
+            app:layout_constraintTop_toTopOf="@id/enter_user_id_next_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_user_id_next_button"
+            style="@style/ColoredButton"
+            android:layout_width="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:enabled="@{viewmodel.nextButtonEnabled}"
+            android:onClick="@{v -> viewmodel.onNextClick()}"
+            android:text="@string/enter_user_id_done_button_text"
+            app:layout_constraintEnd_toEndOf="@id/enter_user_id_content_container"
+            app:layout_constraintStart_toStartOf="@id/enter_user_id_next_button_left_constraint"
+            app:layout_constraintTop_toBottomOf="@id/enter_user_id_content_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

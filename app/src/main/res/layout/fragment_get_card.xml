@@ -1,0 +1,73 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.whitelabelexample.ui.getcard.GetCardViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/get_card_toolbar"
+            style="@style/WhiteToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Получить карту" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.whitelabelexample.ui.getcard.recycler.FieldsRecyclerView
+                    android:id="@+id/get_card_fields_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/get_card_progress_bar"
+                    style="@style/ProgressBarStyle.Small"
+                    android:layout_marginEnd="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/get_card_next_button"
+                    app:layout_constraintEnd_toStartOf="@id/get_card_next_button"
+                    app:layout_constraintTop_toTopOf="@id/get_card_next_button" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/get_card_next_button"
+                    style="@style/ColoredButton"
+                    android:layout_width="140dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:enabled="@{viewmodel.isNextButtonEnabled}"
+                    android:onClick="@{v -> viewmodel.onNextButtonClick()}"
+                    android:text="@string/get_card_next_button_text"
+                    app:layout_constraintVertical_bias="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/get_card_fields_recycler" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

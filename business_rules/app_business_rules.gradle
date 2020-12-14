@@ -1,0 +1,20 @@
+/*________App Modules________*/
+
+/*__Variable__*/
+ext.VAR_APP_MODULES = "APP_MODULES"
+ext.APP_MODULES_ENUM_TYPE = "com.example.whitelabelexample.domain.models.ProjectModule"
+ext.APP_MODULES_LIST_TYPE = "java.util.List<" + APP_MODULES_ENUM_TYPE + ">"
+
+/*__Optional values__*/
+ext.LOYALTY = APP_MODULES_ENUM_TYPE + ".LOYALTY"
+ext.SHOWCASE = APP_MODULES_ENUM_TYPE + ".SHOWCASE"
+
+/*________Main Screen________*/
+
+/*__Variable__*/
+ext.VAR_MAIN_SCREEN = "MAIN_SCREEN"
+ext.VAR_MAIN_SCREEN_TYPE = "com.example.whitelabelexample.domain.models.MainScreen"
+
+/*__Optional values__*/
+ext.MAIN_SCREEN_CARD = VAR_MAIN_SCREEN_TYPE + ".CARD"
+ext.MAIN_SCREEN_SHOWCASE = VAR_MAIN_SCREEN_TYPE + ".SHOWCASE"
