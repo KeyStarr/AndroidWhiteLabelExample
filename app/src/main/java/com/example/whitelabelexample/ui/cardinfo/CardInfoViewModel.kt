@@ -29,10 +29,6 @@ class CardInfoViewModel(
         loadCard()
     }
 
-    fun onRefreshClick() {
-        loadCard()
-    }
-
     private fun loadCard() {
         launch {
             val card = withContext(Dispatchers.IO) { getCardUseCase() }

@@ -19,7 +19,11 @@ class MockCardNetRepository(private val netConnectionChecker: NetConnectionCheck
 
     override fun getCard() = if (netConnectionChecker.isActive()) mockCard else throw IOException("No internet")
 
-    override fun bindPhysicalCard(number: String) = mockCard
+    override fun bindPhysicalCard(number: String) {
+        // pass
+    }
 
-    override fun generateCard(fieldsMap: Map<String, String>) = mockCard
+    override fun generateCard(fieldsMap: Map<String, String>) {
+        // pass
+    }
 }

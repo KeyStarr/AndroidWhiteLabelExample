@@ -23,27 +23,24 @@ class CardInfoFragment : Fragment() {
 
     private val cardNumberMask by lazy { Mask(viewModel.cardMask) }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_card_info, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBar()
-        setOnRefreshListener()
         observeScreenState()
     }
 
-    private fun setStatusBar(){
-        val isLightStatusBar = requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
+    private fun setStatusBar() {
+        val isLightStatusBar =
+            requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
         activity?.setupStatusBarColor(R.color.background, isLightStatusBar)
-    }
-
-    private fun setOnRefreshListener() {
-        card_info_content_swipe_refresh_container.setOnRefreshListener {
-            card_info_content_swipe_refresh_container.isRefreshing = true
-            viewModel.onRefreshClick()
-        }
     }
 
     private fun observeScreenState() {
@@ -55,7 +52,7 @@ class CardInfoFragment : Fragment() {
         setDiscountAndBalance(card.discount, card.balance)
         setCardNumber(card.number)
         setBarcode(card.number)
-        hideSwipeRefreshProgress()
+        card_info_error_placeholder.setVisible(false)
     }
 
     private fun setStatus(status: String?) {
@@ -76,7 +73,8 @@ class CardInfoFragment : Fragment() {
     private fun showDiscount(discount: Int?) {
         card_info_discount_text_view.setVisible(discount != null)
         discount?.let {
-            card_info_discount_text_view.text = getString(R.string.card_info_discount_percent_text, it)
+            card_info_discount_text_view.text =
+                getString(R.string.card_info_discount_percent_text, it)
         }
     }
 
@@ -112,16 +110,13 @@ class CardInfoFragment : Fragment() {
     private fun setBarcode(cardNumber: String) {
         card_info_barcode_image.onSizeCalculated { width, height ->
             try {
-                val encodedBitmap = barcodeEncoder.encodeBitmap(cardNumber, viewModel.barcodeType, width, height)
+                val encodedBitmap =
+                    barcodeEncoder.encodeBitmap(cardNumber, viewModel.barcodeType, width, height)
                 card_info_barcode_image.setImageBitmap(encodedBitmap)
             } catch (exception: Exception) {
                 context?.showErrorAlertDialog(R.string.card_info_barcode_encoding_fail)
             }
         }
-    }
-
-    private fun hideSwipeRefreshProgress() {
-        card_info_content_swipe_refresh_container.isRefreshing = false
     }
 }
 

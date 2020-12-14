@@ -1,10 +1,10 @@
 package com.example.whitelabelexample.domain.usecase
 
-import com.example.whitelabelexample.domain.repositories.storage.CardStorageRepository
+import com.example.whitelabelexample.domain.repositories.storage.IsCardObtainedStorageRepository
 
 class HasCardUseCase(
-    private val cardStorageRep: CardStorageRepository
+    private val isCardObtainedStorageRep: IsCardObtainedStorageRepository
 ) {
 
-    operator fun invoke() = cardStorageRep.get() != null
+    operator fun invoke() = isCardObtainedStorageRep.get() ?: false
 }

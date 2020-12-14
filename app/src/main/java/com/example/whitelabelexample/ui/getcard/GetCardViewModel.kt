@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.terrakok.cicerone.Router
 
-
 class GetCardViewModel(
     private val generateCardUseCase: GenerateCardUseCase,
     private val configRep: GetCardConfig,

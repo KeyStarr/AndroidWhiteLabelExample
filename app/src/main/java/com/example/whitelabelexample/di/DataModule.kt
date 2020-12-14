@@ -7,6 +7,7 @@ import com.example.whitelabelexample.data.net.MockAuthNetRepository
 import com.example.whitelabelexample.data.net.MockCardNetRepository
 import com.example.whitelabelexample.data.pref.AuthTokenPreference
 import com.example.whitelabelexample.data.pref.CardObjectPreference
+import com.example.whitelabelexample.data.pref.IsCardObtainedPreference
 import com.example.whitelabelexample.data.pref.UserIdPreference
 import com.example.whitelabelexample.domain.config.*
 import com.example.whitelabelexample.domain.repositories.net.AuthNetRepository
@@ -14,6 +15,7 @@ import com.example.whitelabelexample.domain.repositories.net.CardNetRepository
 import com.example.whitelabelexample.domain.repositories.net.NetConnectionChecker
 import com.example.whitelabelexample.domain.repositories.storage.AuthTokenStorageRepository
 import com.example.whitelabelexample.domain.repositories.storage.CardStorageRepository
+import com.example.whitelabelexample.domain.repositories.storage.IsCardObtainedStorageRepository
 import com.example.whitelabelexample.domain.repositories.storage.UserIdStorageRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -35,6 +37,7 @@ private fun Module.providePrefs() {
     single<AuthTokenStorageRepository> { AuthTokenPreference(get()) }
     single<CardStorageRepository> { CardObjectPreference(get()) }
     single<UserIdStorageRepository> { UserIdPreference(get()) }
+    single<IsCardObtainedStorageRepository> { IsCardObtainedPreference(get()) }
 }
 
 private fun Module.provideConfigs() {

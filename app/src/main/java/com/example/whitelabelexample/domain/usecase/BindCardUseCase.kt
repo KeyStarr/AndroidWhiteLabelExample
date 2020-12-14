@@ -1,15 +1,15 @@
 package com.example.whitelabelexample.domain.usecase
 
 import com.example.whitelabelexample.domain.repositories.net.CardNetRepository
-import com.example.whitelabelexample.domain.repositories.storage.CardStorageRepository
+import com.example.whitelabelexample.domain.repositories.storage.IsCardObtainedStorageRepository
 
 class BindCardUseCase(
     private val netRep: CardNetRepository,
-    private val cardStorageRep: CardStorageRepository
+    private val isCardObtainedStorageRep: IsCardObtainedStorageRepository
 ) {
 
     operator fun invoke(number: String) {
-        val card = netRep.bindPhysicalCard(number)
-        cardStorageRep.save(card)
+        netRep.bindPhysicalCard(number)
+        isCardObtainedStorageRep.set(true)
     }
 }
