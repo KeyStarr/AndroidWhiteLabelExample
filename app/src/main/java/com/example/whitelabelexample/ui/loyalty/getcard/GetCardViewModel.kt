@@ -2,10 +2,10 @@ package com.example.whitelabelexample.ui.loyalty.getcard
 
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.CardConfig
 import com.example.whitelabelexample.domain.usecase.card.GenerateCardUseCase
+import com.example.whitelabelexample.domain.usecase.card.GetCardFormFieldsUseCase
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
-import com.example.whitelabelexample.ui.loyalty.getcard.model.UiGetCardFieldItemsFactory
+import com.example.whitelabelexample.ui.loyalty.getcard.model.UiGetCardFieldItemsMapper
 import com.example.whitelabelexample.ui.main.ProjectScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -13,15 +13,15 @@ import kotlinx.coroutines.withContext
 import ru.terrakok.cicerone.Router
 
 class GetCardViewModel(
-    private val config: CardConfig,
+    private val getCardFormFieldsUseCase: GetCardFormFieldsUseCase,
     private val generateCardUseCase: GenerateCardUseCase,
-    private val uiItemsFactory: UiGetCardFieldItemsFactory,
+    private val uiItemsMapper: UiGetCardFieldItemsMapper,
     private val router: Router
 ) : BaseViewModel() {
 
     private val fieldItems by lazy {
-        val fields = config.virtualFormFields()
-        uiItemsFactory.create(fields)
+        val fields = getCardFormFieldsUseCase()
+        uiItemsMapper.map(fields)
     }
 
     val isNextButtonEnabled by lazy {

@@ -6,14 +6,14 @@ import com.example.whitelabelexample.domain.models.CardField.*
 import com.example.whitelabelexample.domain.models.CardGenderValues
 import java.util.*
 
-class UiGetCardFieldItemsFactory {
+class UiGetCardFieldItemsMapper {
 
     companion object {
         private const val INPUT_TYPE_PERSONAL_DATA =
             TYPE_CLASS_TEXT or TYPE_TEXT_FLAG_CAP_SENTENCES
     }
 
-    fun create(fields: List<CardField>) = fields.map { createFieldItem(it) }
+    fun map(fields: List<CardField>) = fields.map { createFieldItem(it) }
 
     private fun createFieldItem(field: CardField) =
         when (field) {

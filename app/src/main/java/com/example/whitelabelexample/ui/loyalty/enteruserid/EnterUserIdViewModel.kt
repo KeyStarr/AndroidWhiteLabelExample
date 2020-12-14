@@ -3,8 +3,9 @@ package com.example.whitelabelexample.ui.loyalty.enteruserid
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.UserIdConfig
+import com.example.whitelabelexample.domain.config.AuthConfig
 import com.example.whitelabelexample.domain.models.UserIdType
+import com.example.whitelabelexample.domain.usecase.auth.GetUserIdParamsUseCase
 import com.example.whitelabelexample.domain.usecase.auth.ValidateUserIdUseCase
 import com.example.whitelabelexample.domain.usecase.auth.LoginUseCase
 import com.example.whitelabelexample.ui.main.ProjectScreen
@@ -15,23 +16,23 @@ import ru.terrakok.cicerone.Router
 
 
 class EnterUserIdViewModel(
-    private val config: UserIdConfig,
     private val validateUserIdUseCase: ValidateUserIdUseCase,
+    private val getUserIdParamsUseCase: GetUserIdParamsUseCase,
     private val loginUseCase: LoginUseCase,
     private val router: Router
 ) : BaseViewModel() {
 
-    private val registerMethod by lazy { config.type() }
+    private val userIdParams by lazy { getUserIdParamsUseCase() }
     private var lastCorrectUserId: String? = null
 
     val explanationResId by lazy {
-        when (registerMethod) {
+        when (userIdParams.type) {
             UserIdType.PHONE -> R.string.enter_user_id_explanation_phone_number
             UserIdType.EMAIL -> R.string.enter_user_id_explanation_email
         }
     }
-    val inputMethod by lazy { registerMethod.name }
-    val userIdInputMask by lazy { config.mask() }
+    val inputMethod by lazy { userIdParams.type.name }
+    val userIdInputMask by lazy { userIdParams.mask }
     var isNextButtonEnabled = MutableLiveData<Boolean>().apply { value = false }
 
     fun onInputChange(maskFilled: Boolean, input: String) {

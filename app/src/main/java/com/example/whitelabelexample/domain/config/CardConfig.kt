@@ -15,5 +15,5 @@ interface CardConfig {
 
     fun virtualFormFields(): List<CardField>
 
-    fun shouldCacheCard(): Boolean
+    fun isCacheCard(): Boolean
 }

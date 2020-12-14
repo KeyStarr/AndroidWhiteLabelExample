@@ -63,8 +63,8 @@ ext.CODE_128 = BARCODE_TYPE_ENUM_TYPE + ".CODE_128"
 /*________Should cache card________*/
 
 /*__Variable__*/
-ext.VAR_SHOULD_CACHE_CARD = "SHOULD_CACHE_CARD"
-ext.SHOULD_CACHE_CARD_TYPE = "boolean"
+ext.VAR_IS_CACHE_CARD = "IS_CACHE_CARD"
+ext.IS_CACHE_CARD_TYPE = "boolean"
 
 /*_______________GET_CARD________________*/
 

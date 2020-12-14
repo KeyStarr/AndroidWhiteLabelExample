@@ -12,7 +12,7 @@ class GetCardUseCase(
 ) {
 
     operator fun invoke(): Card? {
-        return if (config.shouldCacheCard()) {
+        return if (config.isCacheCard()) {
             try {
                 val card = netRep.getCard()
                 storageRep.save(card)

@@ -42,6 +42,6 @@ private fun Module.providePrefs() {
 
 private fun Module.provideConfigs() {
     single<CardConfig> { BuildCardConfig() }
-    single<UserIdConfig> { BuildUserIdConfig() }
+    single<AuthConfig> { BuildAuthConfig() }
     single<MainConfig> { BuildMainConfig() }
 }

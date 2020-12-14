@@ -21,7 +21,7 @@ class CardInfoFragment : Fragment() {
 
     private val barcodeEncoder: BarcodeEncoder by lazy { ZxingBarcodeEncoder() }
 
-    private val cardNumberMask by lazy { Mask(viewModel.cardMask) }
+    private val cardNumberMask by lazy { Mask(viewModel.cardMask!!) }
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -12,9 +12,9 @@ class BuildCardConfig : CardConfig {
 
     override fun barcodeType(): BarcodeType = BuildConfig.BARCODE_TYPE
 
-    override fun shouldCacheCard() = BuildConfig.SHOULD_CACHE_CARD
+    override fun obtainmentMethods(): List<ObtainCardMethod> = BuildConfig.OBTAIN_CARD_METHODS
 
     override fun virtualFormFields(): List<CardField> = BuildConfig.GENERATE_CARD_FIELDS
 
-    override fun obtainmentMethods(): List<ObtainCardMethod> = BuildConfig.OBTAIN_CARD_METHODS
+    override fun isCacheCard() = BuildConfig.IS_CACHE_CARD
 }
