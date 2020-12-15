@@ -4,10 +4,10 @@ import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.ext.format
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.repositories.storage.UserIdStorageRepository
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.models.ObtainCardMethod
 import com.example.whitelabelexample.domain.usecase.auth.GetUserIdParamsUseCase
+import com.example.whitelabelexample.domain.usecase.auth.GetUserIdUseCase
 import com.example.whitelabelexample.domain.usecase.card.GetObtainMethodsUseCase
 import com.example.whitelabelexample.ui.main.ProjectScreen
 import com.redmadrobot.inputmask.helper.Mask
@@ -19,7 +19,7 @@ import ru.terrakok.cicerone.Router
 class NoCardViewModel(
     private val getUserIdParamsUseCase: GetUserIdParamsUseCase,
     private val getObtainMethodsUseCase: GetObtainMethodsUseCase,
-    private val userIdRep: UserIdStorageRepository,
+    private val getUserIdUseCase: GetUserIdUseCase,
     private val router: Router
 ) : BaseViewModel() {
 
@@ -43,7 +43,7 @@ class NoCardViewModel(
 
     init {
         launch {
-            val rawId = withContext(Dispatchers.IO) { userIdRep.get() }
+            val rawId = withContext(Dispatchers.IO) { getUserIdUseCase() }
             rawId?.let { userId.value = formatUserId(it) }
         }
     }

@@ -1,9 +1,6 @@
 package com.example.whitelabelexample.di
 
-import com.example.whitelabelexample.domain.usecase.auth.GetUserIdParamsUseCase
-import com.example.whitelabelexample.domain.usecase.auth.IsAuthorizedUseCase
-import com.example.whitelabelexample.domain.usecase.auth.LoginUseCase
-import com.example.whitelabelexample.domain.usecase.auth.ValidateUserIdUseCase
+import com.example.whitelabelexample.domain.usecase.auth.*
 import com.example.whitelabelexample.domain.usecase.card.*
 import com.example.whitelabelexample.domain.usecase.main.GetEnabledModulesUseCase
 import com.example.whitelabelexample.domain.usecase.main.GetMainTabUseCase
@@ -32,6 +29,7 @@ private fun Module.provideAuth() {
     single { ValidateUserIdUseCase(get()) }
     single { IsAuthorizedUseCase(get()) }
     single { GetUserIdParamsUseCase(get()) }
+    single { GetUserIdUseCase(get()) }
 }
 
 private fun Module.provideMain() {
