@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="active">#a160d5</color>
-    <color name="disabled">#e2c8f6</color>
     <color name="background">#f6ebff</color>
+    <color name="disabled">#e2c8f6</color>
     <color name="field_dark">#f5f5f5</color>
     <color name="text_light">#ffffff</color>
     <color name="text_dark">#353535</color>
     <color name="text_tertiary">@color/text_dark</color>
     <color name="text_grey">#9a9a9a</color>
     <color name="error">#b00020</color>
-    <color name="divider">#f0f0f0</color>
-    <color name="notifications_icon_fill">#a665da</color>
 </resources>
