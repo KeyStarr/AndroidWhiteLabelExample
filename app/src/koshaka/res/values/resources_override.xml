@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="is_light_status_bar_on_screens_with_background">true</bool>
+    <string name="brand_name">Ювалерия</string>
+</resources>
