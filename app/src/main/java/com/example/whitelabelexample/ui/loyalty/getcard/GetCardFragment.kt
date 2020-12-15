@@ -5,7 +5,6 @@ import android.view.View
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.databinding.BaseBindingMvvmFragment
 import com.example.whitelabelexample.common.ext.initBackButton
-import com.example.whitelabelexample.common.ext.observe
 import com.example.whitelabelexample.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentGetCardBinding
 import kotlinx.android.synthetic.main.fragment_get_card.*
@@ -34,6 +33,6 @@ class GetCardFragment :
     }
 
     private fun observeScreenState() {
-        viewModel.fieldsData.observe(this, get_card_fields_recycler::swapItems)
+        viewModel.fieldsData.observe(viewLifecycleOwner, get_card_fields_recycler::swapItems)
     }
 }

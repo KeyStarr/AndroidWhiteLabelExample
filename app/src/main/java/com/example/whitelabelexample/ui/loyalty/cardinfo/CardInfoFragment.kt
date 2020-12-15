@@ -12,6 +12,7 @@ import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.BarcodeEncoder
 import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.ZxingBarcodeEncoder
 import com.redmadrobot.inputmask.helper.Mask
 import kotlinx.android.synthetic.main.fragment_card_info.*
+import org.koin.android.scope.lifecycleScope
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class CardInfoFragment : Fragment() {
@@ -43,7 +44,7 @@ class CardInfoFragment : Fragment() {
     }
 
     private fun observeScreenState() {
-        viewModel.cardData.observe(this, this::showContent)
+        viewModel.cardData.observe(viewLifecycleOwner, this::showContent)
     }
 
     private fun showContent(card: Card) {

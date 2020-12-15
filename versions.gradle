@@ -26,7 +26,6 @@ ext.versions = [
     input_mask         : '4.3.0',
     adapter_delegates  : '4.1.1',
     cicerone           : '5.1.0',
-    lifecycle          : '2.2.0',
     threetenabp        : '1.2.1',
     zxing_barcode      : '3.3.3'
 ]

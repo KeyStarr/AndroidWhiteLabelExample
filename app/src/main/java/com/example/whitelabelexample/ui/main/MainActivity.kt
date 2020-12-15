@@ -51,9 +51,7 @@ class MainActivity : AppCompatActivity(), KoinComponent {
                 onTabClickListener(it.itemId)
                 true
             }
-            setOnNavigationItemReselectedListener { item ->
-                //nothing
-            }
+            setOnNavigationItemReselectedListener { /* pass */ }
         }
     }
 

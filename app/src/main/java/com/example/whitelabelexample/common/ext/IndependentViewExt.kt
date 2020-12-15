@@ -13,13 +13,6 @@ import androidx.annotation.BoolRes
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
-
-fun <T> LiveData<T>.observe(owner: LifecycleOwner, block: (T) -> Unit) {
-    observe(owner, Observer { block(it) })
-}
 
 /**
  * Try to hide the keyboard and returns whether it worked

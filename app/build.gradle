@@ -22,8 +22,8 @@ android {
         setProperty("archivesBaseName", buildApkName())
     }
 
-    dataBinding {
-        enabled true
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {
@@ -50,7 +50,6 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
     implementation "androidx.cardview:cardview:$versions.cardview"
-    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
     implementation "com.google.android.material:material:$versions.material"
     //noinspection KtxExtensionAvailable
     implementation "androidx.preference:preference:$versions.preference"
