@@ -47,7 +47,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="32dp"
-                    android:enabled="@{viewModel.isNextButtonEnabled}"
+                    android:enabled="@{viewModel.isNextButtonEnabledData}"
                     android:onClick="@{v -> viewModel.onNextButtonClick()}"
                     android:text="@string/get_card_next_button_text"
                     app:layout_constraintVertical_bias="1"

@@ -39,12 +39,12 @@ class NoCardViewModel(
         }
     }
 
-    val userId = MutableLiveData<String>()
+    val userIdData = MutableLiveData<String>()
 
     init {
         launch {
             val rawId = withContext(Dispatchers.IO) { getUserIdUseCase() }
-            rawId?.let { userId.value = formatUserId(it) }
+            rawId?.let { userIdData.value = formatUserId(it) }
         }
     }
 

@@ -24,7 +24,7 @@ class GetCardViewModel(
         uiItemsMapper.map(fields)
     }
 
-    val isNextButtonEnabled by lazy {
+    val isNextButtonEnabledData by lazy {
         MutableLiveData<Boolean>().apply { value = false }
     }
 
@@ -36,7 +36,7 @@ class GetCardViewModel(
 
     fun onFieldInputChanged(field: FieldItem) {
         field.isValid = field.validator.validate(field.input)
-        isNextButtonEnabled.value = areAllFieldsValid()
+        isNextButtonEnabledData.value = areAllFieldsValid()
     }
 
     private fun areAllFieldsValid() = fieldItems.find { it.isValid.not() }?.let { false } ?: true
