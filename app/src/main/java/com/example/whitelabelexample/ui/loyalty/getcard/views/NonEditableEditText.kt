@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.ext.hideKeyboard
+import com.example.whitelabelexample.ui.common.ext.hideKeyboard
 import kotlinx.android.synthetic.main.non_editable_edit_text_layout.view.*
 
 class NonEditableEditText(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {

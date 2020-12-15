@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.delegates
+package com.example.whitelabelexample.ui.common.delegates
 
 import android.view.ViewGroup
 import androidx.collection.SparseArrayCompat

@@ -1,7 +1,7 @@
 package com.example.whitelabelexample.ui.loyalty.getcard.recycler
 
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.delegates.AdapterDelegateType
+import com.example.whitelabelexample.ui.common.delegates.AdapterDelegateType
 
 enum class FieldsAdapterTypes(
     override val type: Int,

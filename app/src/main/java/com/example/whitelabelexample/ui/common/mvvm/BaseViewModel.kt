@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.mvvm
+package com.example.whitelabelexample.ui.common.mvvm
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope

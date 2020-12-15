@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.ext
+package com.example.whitelabelexample.ui.common.ext
 
 import android.content.Context
 import android.os.Build

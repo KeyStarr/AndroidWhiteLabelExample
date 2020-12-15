@@ -5,7 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListPopupWindow
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
+import com.example.whitelabelexample.ui.common.delegates.BaseDelegatesAdapterItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.ChoiceFieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsAdapterTypes

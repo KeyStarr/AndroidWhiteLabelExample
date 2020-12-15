@@ -1,8 +1,7 @@
 package com.example.whitelabelexample.ui.loyalty.bindcard
 
 import androidx.lifecycle.MutableLiveData
-import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.CardConfig
+import com.example.whitelabelexample.ui.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.usecase.card.BindCardUseCase
 import com.example.whitelabelexample.domain.usecase.card.GetCardNumberMaskUseCase
 import com.example.whitelabelexample.ui.main.ProjectScreen

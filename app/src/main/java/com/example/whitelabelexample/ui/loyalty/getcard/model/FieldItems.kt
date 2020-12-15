@@ -1,8 +1,8 @@
 package com.example.whitelabelexample.ui.loyalty.getcard.model
 
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.delegates.AdapterDelegateType
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
+import com.example.whitelabelexample.ui.common.delegates.AdapterDelegateType
+import com.example.whitelabelexample.ui.common.delegates.BaseDelegatesAdapterItem
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsAdapterTypes
 import com.example.whitelabelexample.ui.loyalty.getcard.NonBlankValidator
 import com.example.whitelabelexample.ui.loyalty.getcard.Validator

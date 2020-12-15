@@ -2,8 +2,8 @@ package com.example.whitelabelexample.ui.loyalty.nocard
 
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.ext.format
-import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.ui.common.ext.format
+import com.example.whitelabelexample.ui.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.models.ObtainCardMethod
 import com.example.whitelabelexample.domain.usecase.auth.GetUserIdParamsUseCase

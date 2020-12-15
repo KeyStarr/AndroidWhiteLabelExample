@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.databinding
+package com.example.whitelabelexample.ui.common.databinding
 
 import android.os.Bundle
 import android.view.LayoutInflater

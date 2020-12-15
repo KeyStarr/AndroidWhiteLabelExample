@@ -7,9 +7,9 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.databinding.BaseBindingMvvmFragment
-import com.example.whitelabelexample.common.ext.getBool
-import com.example.whitelabelexample.common.ext.setupStatusBarColor
+import com.example.whitelabelexample.ui.common.databinding.BaseBindingMvvmFragment
+import com.example.whitelabelexample.ui.common.ext.getBool
+import com.example.whitelabelexample.ui.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentNoCardBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 

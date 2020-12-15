@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.views
+package com.example.whitelabelexample.ui.common.views
 
 import android.content.Context
 import android.util.AttributeSet

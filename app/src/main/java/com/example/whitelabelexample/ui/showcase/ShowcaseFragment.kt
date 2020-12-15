@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.ext.setupStatusBarColor
+import com.example.whitelabelexample.ui.common.ext.setupStatusBarColor
 
 class ShowcaseFragment : Fragment() {
 

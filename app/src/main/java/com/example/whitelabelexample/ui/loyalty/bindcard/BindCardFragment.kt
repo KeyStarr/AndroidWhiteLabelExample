@@ -3,10 +3,10 @@ package com.example.whitelabelexample.ui.loyalty.bindcard
 import android.os.Bundle
 import android.view.View
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.databinding.BaseBindingMvvmFragment
-import com.example.whitelabelexample.common.ext.initBackButton
-import com.example.whitelabelexample.common.ext.onEndCallListener
-import com.example.whitelabelexample.common.ext.setupStatusBarColor
+import com.example.whitelabelexample.ui.common.databinding.BaseBindingMvvmFragment
+import com.example.whitelabelexample.ui.common.ext.initBackButton
+import com.example.whitelabelexample.ui.common.ext.onEndCallListener
+import com.example.whitelabelexample.ui.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentBindCardBinding
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import kotlinx.android.synthetic.main.fragment_bind_card.*

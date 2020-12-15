@@ -3,7 +3,7 @@ package com.example.whitelabelexample.ui.loyalty.getcard.recycler.delegates
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
+import com.example.whitelabelexample.ui.common.delegates.BaseDelegatesAdapterItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsAdapterTypes
 import com.example.whitelabelexample.ui.loyalty.getcard.model.TextFieldItem

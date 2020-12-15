@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.prefs
+package com.example.whitelabelexample.ui.common.prefs
 
 import android.content.SharedPreferences
 import com.google.gson.Gson

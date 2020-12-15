@@ -4,7 +4,7 @@ import android.app.DatePickerDialog
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
+import com.example.whitelabelexample.ui.common.delegates.BaseDelegatesAdapterItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.DateFieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsAdapterTypes

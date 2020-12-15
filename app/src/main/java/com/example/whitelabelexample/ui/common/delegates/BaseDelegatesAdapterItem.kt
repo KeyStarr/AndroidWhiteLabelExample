@@ -1,4 +1,4 @@
-package com.example.whitelabelexample.common.delegates
+package com.example.whitelabelexample.ui.common.delegates
 
 abstract class BaseDelegatesAdapterItem(val adapterType: AdapterDelegateType) {
 

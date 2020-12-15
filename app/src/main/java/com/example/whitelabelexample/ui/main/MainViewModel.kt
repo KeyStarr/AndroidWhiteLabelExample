@@ -1,6 +1,6 @@
 package com.example.whitelabelexample.ui.main
 
-import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.ui.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.models.NavigationTab
 import com.example.whitelabelexample.domain.models.tabsByModules
 import com.example.whitelabelexample.domain.usecase.main.GetEnabledModulesUseCase

@@ -5,10 +5,10 @@ import android.util.AttributeSet
 import androidx.collection.SparseArrayCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whitelabelexample.ui.loyalty.getcard.model.FieldItem
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
-import com.example.whitelabelexample.common.delegates.SimpleAdapterDelegate
-import com.example.whitelabelexample.common.delegates.SimpleDelegatesAdapter
-import com.example.whitelabelexample.common.views.LeakSafeRecyclerView
+import com.example.whitelabelexample.ui.common.delegates.BaseDelegatesAdapterItem
+import com.example.whitelabelexample.ui.common.delegates.SimpleAdapterDelegate
+import com.example.whitelabelexample.ui.common.delegates.SimpleDelegatesAdapter
+import com.example.whitelabelexample.ui.common.views.LeakSafeRecyclerView
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.FieldsAdapterTypes.*
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.delegates.ChoiceFieldDelegate
 import com.example.whitelabelexample.ui.loyalty.getcard.recycler.delegates.DateFieldDelegate

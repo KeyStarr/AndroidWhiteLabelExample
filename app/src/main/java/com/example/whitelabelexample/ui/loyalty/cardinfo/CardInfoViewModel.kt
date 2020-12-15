@@ -1,7 +1,7 @@
 package com.example.whitelabelexample.ui.loyalty.cardinfo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.whitelabelexample.common.mvvm.BaseViewModel
+import com.example.whitelabelexample.ui.common.mvvm.BaseViewModel
 import com.example.whitelabelexample.domain.models.Card
 import com.example.whitelabelexample.domain.usecase.card.GetBarcodeTypeUseCase
 import com.example.whitelabelexample.domain.usecase.card.GetCardNumberMaskUseCase

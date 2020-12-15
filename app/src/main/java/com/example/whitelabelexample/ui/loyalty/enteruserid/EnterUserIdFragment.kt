@@ -7,10 +7,10 @@ import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.BindingAdapter
 import com.example.whitelabelexample.R
-import com.example.whitelabelexample.common.databinding.BaseBindingMvvmFragment
-import com.example.whitelabelexample.common.ext.getBool
-import com.example.whitelabelexample.common.ext.onEndCallListener
-import com.example.whitelabelexample.common.ext.setupStatusBarColor
+import com.example.whitelabelexample.ui.common.databinding.BaseBindingMvvmFragment
+import com.example.whitelabelexample.ui.common.ext.getBool
+import com.example.whitelabelexample.ui.common.ext.onEndCallListener
+import com.example.whitelabelexample.ui.common.ext.setupStatusBarColor
 import com.example.whitelabelexample.databinding.FragmentEnterUserIdBinding
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.redmadrobot.inputmask.MaskedTextChangedListener
