@@ -13,10 +13,10 @@ android {
             applicationId 'com.livetyping.jewelry'
 
             /* MAIN SCREEN */
-            buildConfigField VAR_MAIN_SCREEN_TYPE, VAR_MAIN_SCREEN, MAIN_SCREEN_CARD
+            buildConfigField VAR_MAIN_SCREEN_TYPE, VAR_MAIN_SCREEN, MAIN_SCREEN_SHOPS
 
             /* MODULES */
-            buildConfigField APP_MODULES_LIST_TYPE, VAR_APP_MODULES, createJavaList(LOYALTY, SHOWCASE)
+            buildConfigField APP_MODULES_LIST_TYPE, VAR_APP_MODULES, createJavaList(LOYALTY, SHOPS)
 
             /* REGISTRATION */
             buildConfigField PATH_TO_USER_ID_TYPE_ENUM, VAR_USER_ID_TYPE, USER_ID_TYPE_PHONE
@@ -24,14 +24,15 @@ android {
             buildConfigField "String", VAR_USER_ID_REGEX, DEFAULT_PHONE_REGEX
 
             /* NO CARD */
-            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS, createJavaList(GENERATE_VIRTUAL)
+            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS,
+                    createJavaList(GENERATE_VIRTUAL)
 
             /* BIND CARD */
             buildConfigField "String", VAR_CARD_NUMBER_MASK, "\"[0000] [0000] [0000] [0000]\""
 
             /* GET CARD */
-            buildConfigField CARD_FIELD_LIST_TYPE, VAR_GENERATE_CARD_FIELDS, createJavaList(
-                    FIRST_NAME, LAST_NAME, BIRTHDAY, GENDER)
+            buildConfigField CARD_FIELD_LIST_TYPE, VAR_GENERATE_CARD_FIELDS,
+                    createJavaList(EMAIL, FIRST_NAME, LAST_NAME)
 
             /* CARD INFO */
             buildConfigField BARCODE_TYPE_ENUM_TYPE, VAR_BARCODE_TYPE, CODE_128

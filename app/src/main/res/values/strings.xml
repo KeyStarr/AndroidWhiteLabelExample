@@ -63,7 +63,7 @@
 
     <!-- Placeholders  -->
     <string name="placeholder_card_info_empty_error">You did it!\nКарты нет по одной из причин:\n1) кэш выключен;\n2) нет сети, а кэш пустой.</string>
-    <string name="placeholder_shops">А здесь магазины!</string>
+    <string name="placeholder_shops">Здесь магазины!</string>
     <string name="placeholder_showcase">Здесь новости!</string>
 
 </resources>
