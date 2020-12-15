@@ -1,8 +1,8 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlin-android-extensions"
 }
 
 apply from: "$rootDir/project_flavors/flavor_loyaka.gradle"
@@ -11,15 +11,15 @@ apply from: "$rootDir/project_flavors/flavors_common.gradle"
 apply from: "$rootDir/versions.gradle"
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion android_versions.compile_sdk_version
+    buildToolsVersion android_versions.build_tool_version
 
     defaultConfig {
-        applicationId "com.example.whitelabelexample"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion android_versions.min_sdk_version
+        targetSdkVersion android_versions.target_sdk_version
+        versionCode buildVersionCode()
+        versionName buildVersionName()
+        setProperty("archivesBaseName", buildApkName())
     }
 
     dataBinding {
@@ -36,46 +36,38 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
     flavorDimensions APP_DIMENSION
 }
 
 dependencies {
+    // Kotlin
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines"
 
-    // TODO: remove useless
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-
+    // AndroidX & material
+    implementation "androidx.core:core-ktx:$versions.androidx_core"
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
+    implementation "androidx.cardview:cardview:$versions.cardview"
     implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+    implementation "com.google.android.material:material:$versions.material"
+    //noinspection KtxExtensionAvailable
+    implementation "androidx.preference:preference:$versions.preference"
 
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
-    /*Glide*/
+    // Glide
     kapt "com.github.bumptech.glide:compiler:$versions.glide"
     implementation "com.github.bumptech.glide:glide:$versions.glide"
 
     // Koin
-    implementation "org.koin:koin-android:2.2.0"
-    implementation "org.koin:koin-android-viewmodel:2.2.0"
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "org.koin:koin-android-viewmodel:$versions.koin"
 
-    implementation "androidx.cardview:cardview:$versions.cardview"
+    // Other
     implementation "com.google.code.gson:gson:$versions.gson"
-    implementation 'com.redmadrobot:input-mask-android:4.3.0'
-    implementation 'com.chaos.view:pinview:1.4.3'
+    implementation "com.redmadrobot:input-mask-android:$versions.input_mask"
     implementation "com.hannesdorfmann:adapterdelegates4:$versions.adapter_delegates"
-    // Time
     implementation "com.jakewharton.threetenabp:threetenabp:$versions.threetenabp"
-    // Navigation
     implementation "ru.terrakok.cicerone:cicerone:$versions.cicerone"
-    // Barcode
-    implementation group: 'com.google.zxing', name: 'core', version: '3.3.3'
-
-    implementation 'androidx.preference:preference:1.1.1'
+    implementation "com.google.zxing:core:$versions.zxing_barcode"
 }
