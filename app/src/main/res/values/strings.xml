@@ -9,7 +9,6 @@
     <string name="no_card_attach_card_text">Привяжите пластиковую карту, если она у вас есть, или заведите виртуальную. Пусть карта всегда будет с вами!</string>
     <string name="attach_card_button_text">Привязать пластиковую карту</string>
     <string name="get_card_button_text">Получить виртуальную карту</string>
-    <string name="next_button_text">Далее</string>
 
     <!-- Enter UserId -->
     <string name="enter_user_id_title">Карта</string>

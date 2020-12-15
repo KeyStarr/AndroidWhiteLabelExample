@@ -6,7 +6,7 @@ plugins {
 }
 
 apply from: "$rootDir/project_flavors/flavor_loyaka.gradle"
-apply from: "$rootDir/project_flavors/flavor_koshaka.gradle"
+apply from: "$rootDir/project_flavors/flavor_jewelry.gradle"
 apply from: "$rootDir/project_flavors/flavors_common.gradle"
 apply from: "$rootDir/versions.gradle"
 

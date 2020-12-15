@@ -6,11 +6,11 @@ android {
 
     productFlavors {
 
-        koshaka {
+        jewelry {
             dimension APP_DIMENSION
 
-            resValue "string", "app_name", "Koshaka"
-            applicationId 'com.livetyping.koshaka'
+            resValue "string", "app_name", "Ювалерия"
+            applicationId 'com.livetyping.jewelry'
 
             /* MAIN SCREEN */
             buildConfigField VAR_MAIN_SCREEN_TYPE, VAR_MAIN_SCREEN, MAIN_SCREEN_CARD
