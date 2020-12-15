@@ -109,13 +109,9 @@ class CardInfoFragment : Fragment() {
 
     private fun setBarcode(cardNumber: String) {
         card_info_barcode_image.onSizeCalculated { width, height ->
-            try {
-                val encodedBitmap =
-                    barcodeEncoder.encodeBitmap(cardNumber, viewModel.barcodeType, width, height)
-                card_info_barcode_image.setImageBitmap(encodedBitmap)
-            } catch (exception: Exception) {
-                context?.showErrorAlertDialog(R.string.card_info_barcode_encoding_fail)
-            }
+            val encodedBitmap =
+                barcodeEncoder.encodeBitmap(cardNumber, viewModel.barcodeType, width, height)
+            card_info_barcode_image.setImageBitmap(encodedBitmap)
         }
     }
 }
