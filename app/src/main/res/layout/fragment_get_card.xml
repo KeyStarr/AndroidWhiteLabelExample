@@ -4,7 +4,7 @@
     <data>
 
         <variable
-            name="viewmodel"
+            name="viewModel"
             type="com.example.whitelabelexample.ui.loyalty.getcard.GetCardViewModel" />
     </data>
 
@@ -47,8 +47,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="32dp"
-                    android:enabled="@{viewmodel.isNextButtonEnabled}"
-                    android:onClick="@{v -> viewmodel.onNextButtonClick()}"
+                    android:enabled="@{viewModel.isNextButtonEnabled}"
+                    android:onClick="@{v -> viewModel.onNextButtonClick()}"
                     android:text="@string/get_card_next_button_text"
                     app:layout_constraintVertical_bias="1"
                     app:layout_constraintBottom_toBottomOf="parent"

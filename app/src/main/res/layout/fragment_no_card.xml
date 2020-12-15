@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="viewmodel"
+            name="viewModel"
             type="com.example.whitelabelexample.ui.loyalty.nocard.NoCardViewModel" />
     </data>
 
@@ -14,13 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background"
-        android:orientation="vertical"
-        android:clipChildren="false">
+        android:clipChildren="false"
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,8 +36,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Medium.Tertiary.21"
-                    app:rationaleResId="@{viewmodel.rationaleMsgResId}"
-                    app:userId="@{viewmodel.userId}"
+                    app:rationaleResId="@{viewModel.rationaleMsgResId}"
+                    app:userId="@{viewModel.userId}"
                     tools:text="К номеру +7 962 043-23-43 не привязано ни одной карты" />
 
                 <ImageView
@@ -59,9 +60,9 @@
                     style="@style/ColoredButton"
                     android:layout_width="match_parent"
                     android:layout_marginTop="12dp"
-                    android:onClick="@{(v)->viewmodel.onBindCardClick()}"
+                    android:onClick="@{(v)->viewModel.onBindCardClick()}"
                     android:text="@string/attach_card_button_text"
-                    app:isVisible="@{viewmodel.isShowBindPlasticButton}" />
+                    app:isVisible="@{viewModel.isShowBindPlasticButton}" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/no_card_get_virtual_button"
@@ -69,9 +70,9 @@
                     android:layout_width="match_parent"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="24dp"
-                    android:onClick="@{(v)->viewmodel.onGetVirtualCardClick()}"
+                    android:onClick="@{(v)->viewModel.onGetVirtualCardClick()}"
                     android:text="@string/get_card_button_text"
-                    app:isVisible="@{viewmodel.isShowGetVirtualButton}" />
+                    app:isVisible="@{viewModel.isShowGetVirtualButton}" />
 
             </LinearLayout>
 

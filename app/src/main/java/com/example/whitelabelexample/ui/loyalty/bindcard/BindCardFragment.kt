@@ -19,7 +19,7 @@ class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBind
     override fun layoutId() = R.layout.fragment_bind_card
 
     override fun setBindingVars(binding: FragmentBindCardBinding) {
-        binding.viewmodel = viewModel
+        binding.viewModel = viewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -20,7 +20,7 @@ class NoCardFragment : BaseBindingMvvmFragment<NoCardViewModel, FragmentNoCardBi
     override fun layoutId() = R.layout.fragment_no_card
 
     override fun setBindingVars(binding: FragmentNoCardBinding) {
-        binding.viewmodel = viewModel
+        binding.viewModel = viewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class NoCardFragment : BaseBindingMvvmFragment<NoCardViewModel, FragmentNoCardBi
     }
 
     private fun setStatusBar(){
-        val isLightStatusBar = context!!.getBool(R.bool.is_light_status_bar_on_screens_with_background)
+        val isLightStatusBar = requireContext().getBool(R.bool.is_light_status_bar_on_screens_with_background)
         activity?.setupStatusBarColor(R.color.background, isLightStatusBar)
     }
 }

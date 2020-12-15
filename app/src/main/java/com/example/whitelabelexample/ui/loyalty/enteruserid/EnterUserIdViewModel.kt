@@ -3,7 +3,6 @@ package com.example.whitelabelexample.ui.loyalty.enteruserid
 import androidx.lifecycle.MutableLiveData
 import com.example.whitelabelexample.R
 import com.example.whitelabelexample.common.mvvm.BaseViewModel
-import com.example.whitelabelexample.domain.config.AuthConfig
 import com.example.whitelabelexample.domain.models.UserIdType
 import com.example.whitelabelexample.domain.usecase.auth.GetUserIdParamsUseCase
 import com.example.whitelabelexample.domain.usecase.auth.ValidateUserIdUseCase

@@ -25,7 +25,7 @@ class EnterUserIdFragment :
     override fun layoutId() = R.layout.fragment_enter_user_id
 
     override fun setBindingVars(binding: FragmentEnterUserIdBinding) {
-        binding.viewmodel = viewModel
+        binding.viewModel = viewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -62,8 +62,7 @@ class EnterUserIdFragment :
 
     private fun setOnEnterNextListener() {
         enter_user_id_input_edit_text.onEndCallListener {
-            if (enter_user_id_next_button.isEnabled)
-                viewModel.onNextClick()
+            if (enter_user_id_next_button.isEnabled) viewModel.onNextClick()
         }
     }
 

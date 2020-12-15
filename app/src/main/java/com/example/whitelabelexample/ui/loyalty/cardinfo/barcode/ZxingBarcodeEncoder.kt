@@ -8,7 +8,7 @@ import com.google.zxing.common.BitMatrix
 
 
 /**
- * Helper class for encoding barcodes as a Bitmap.
+ * Helper class for encoding barcode as a Bitmap.
  *
  * Adapted from QRCodeEncoder, from the zxing project:
  * https://github.com/zxing/zxing
@@ -35,7 +35,7 @@ class ZxingBarcodeEncoder : BarcodeEncoder {
         } catch (e: WriterException) {
             throw e
         } catch (e: Exception) {
-            // ZXing sometimes throws an IllegalArgumentException
+            // Zxing sometimes throws an IllegalArgumentException
             throw WriterException(e)
         }
     }

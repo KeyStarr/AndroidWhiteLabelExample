@@ -19,7 +19,7 @@ class GetCardFragment :
     override fun layoutId() = R.layout.fragment_get_card
 
     override fun setBindingVars(binding: FragmentGetCardBinding) {
-        binding.viewmodel = viewModel
+        binding.viewModel = viewModel
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,9 +30,7 @@ class GetCardFragment :
     }
 
     private fun initRecyclerAdapter() {
-        get_card_fields_recycler.initAdapter {
-            viewModel.onFieldInputChanged(it)
-        }
+        get_card_fields_recycler.initAdapter(viewModel::onFieldInputChanged)
     }
 
     private fun observeScreenState() {

@@ -49,4 +49,12 @@
     <style name="PickerButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/active</item>
     </style>
+
+    <style name="ColoredButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColorPrimaryInverse">#ffffff</item>
+        <item name="android:textAppearance">@style/Bold.Secondary.14</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:backgroundTint">@color/colored_button_selector</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
 </resources>

@@ -5,7 +5,7 @@
     <data>
 
         <variable
-            name="viewmodel"
+            name="viewModel"
             type="com.example.whitelabelexample.ui.loyalty.enteruserid.EnterUserIdViewModel" />
     </data>
 
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/in_card_content_margin"
                     android:layout_marginEnd="@dimen/in_card_content_margin"
-                    android:text="@{viewmodel.explanationResId}"
+                    android:text="@{viewModel.explanationResId}"
                     app:layout_constraintBottom_toBottomOf="@id/enter_user_id_card_image_view"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/enter_user_id_card_image_view"
                     app:layout_constraintVertical_bias="@dimen/user_id_input_field_vertical_bias"
-                    app:userIdType="@{viewmodel.inputMethod}" />
+                    app:userIdType="@{viewModel.inputMethod}" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,8 +131,8 @@
             android:layout_width="0dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
-            android:enabled="@{viewmodel.nextButtonEnabled}"
-            android:onClick="@{v -> viewmodel.onNextClick()}"
+            android:enabled="@{viewModel.nextButtonEnabled}"
+            android:onClick="@{v -> viewModel.onNextClick()}"
             android:text="@string/enter_user_id_done_button_text"
             app:layout_constraintEnd_toEndOf="@id/enter_user_id_content_container"
             app:layout_constraintStart_toStartOf="@id/enter_user_id_next_button_left_constraint"

@@ -1,6 +1,5 @@
 package com.example.whitelabelexample.ui.main
 
-import androidx.fragment.app.Fragment
 import com.example.whitelabelexample.ui.loyalty.bindcard.BindCardFragment
 import com.example.whitelabelexample.ui.loyalty.cardinfo.CardInfoFragment
 import com.example.whitelabelexample.ui.loyalty.enteruserid.EnterUserIdFragment

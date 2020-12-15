@@ -4,8 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.whitelabelexample.common.delegates.AdapterDelegateType
-import com.example.whitelabelexample.common.delegates.BaseDelegatesAdapterItem
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
 
 abstract class SimpleAdapterDelegate(private val adapterDelegateType: AdapterDelegateType)

@@ -34,19 +34,11 @@ class NonEditableEditText(context: Context, attrs: AttributeSet?) : FrameLayout(
         non_editable_input_layout.hint = hint
     }
 
-    fun setHint(hint: String) {
-        non_editable_input_layout.hint = hint
-    }
-
     fun setText(textRes: Int) {
         non_editable_input_edit_text.setText(textRes)
     }
 
     fun setText(text: String) {
         non_editable_input_edit_text.setText(text)
-    }
-
-    fun toggleEnabled(enabled: Boolean) {
-        non_editable_input_edit_text.isEnabled = enabled
     }
 }

@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- Resources that must be overriden -->
+    <!-- Resources that must be overridden -->
     <string name="brand_name" />
 
     <!-- No card-->
@@ -17,27 +17,14 @@
     <string name="enter_user_id_explanation_email">Введите адрес email, чтобы привязать или получить дисконтную карту</string>
     <string name="enter_user_id_done_button_text">Далее</string>
 
-    <!-- Confirm code-->
-    <string name="confirm_explanation_phone">Мы отправили вам СМС с кодом</string>
-    <string name="confirm_explanation_email">Мы отправили вам email-сообщение с кодом</string>
-    <string name="confirm_retry_send_code"><u>Отправить код повторно</u></string>
-    <string name="confirm_wrong_code_error_message">Неверный код</string>
-    <string name="confirm_retry_cooldown_message">Отправить код повторно можно будет через %1$s</string>
-    <string name="confirm_time_left_hours">%1$d ч</string>
-    <string name="confirm_time_left_minutes">%1$d мин</string>
-    <string name="confirm_time_left_seconds">%1$d сек</string>
-    <string name="confirm_code_too_many_attempts_error_msg">Количество попыток превышено</string>
-
     <!-- Get virtual card -->
     <string name="get_card_next_button_text">Далее</string>
-    <string name="get_card_form_invalid_error">Одно или больше полей заполнены некорректно</string>
     <string name="get_card_gender_empty">""</string>
 
     <!-- Bind card -->
     <string name="bind_card_title_text">Введите номер карты</string>
     <string name="bind_card_edit_text_hint">Номер карты</string>
     <string name="bind_card_next_button_text">Далее</string>
-    <string name="bind_card_wrong_number_error">Неверный номер карты</string>
     <string name="card_first_name">Имя</string>
     <string name="card_last_name">Фамилия</string>
     <string name="card_birthday">Дата рождения</string>
@@ -59,7 +46,6 @@
         <item quantity="other">бонусов</item>
     </plurals>
     <string name="card_info_barcode_content_desc">Штрихкод, в котором закодирован код Вашей карты</string>
-    <string name="card_info_barcode_encoding_fail">Не удалось сформировать штрихкод карты</string>
 
     <!-- Placeholders  -->
     <string name="placeholder_card_info_empty_error">You did it!\nКарты нет по одной из причин:\n1) кэш выключен;\n2) нет сети, а кэш пустой.</string>

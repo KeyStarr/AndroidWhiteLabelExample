@@ -11,7 +11,6 @@ import com.example.whitelabelexample.domain.models.Card
 import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.BarcodeEncoder
 import com.example.whitelabelexample.ui.loyalty.cardinfo.barcode.ZxingBarcodeEncoder
 import com.redmadrobot.inputmask.helper.Mask
-import com.redmadrobot.inputmask.model.CaretString
 import kotlinx.android.synthetic.main.fragment_card_info.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -21,7 +20,7 @@ class CardInfoFragment : Fragment() {
 
     private val barcodeEncoder: BarcodeEncoder by lazy { ZxingBarcodeEncoder() }
 
-    private val cardNumberMask by lazy { Mask(viewModel.cardMask!!) }
+    private val cardNumberMask by lazy { Mask(viewModel.cardMask) }
 
     override fun onCreateView(
         inflater: LayoutInflater,

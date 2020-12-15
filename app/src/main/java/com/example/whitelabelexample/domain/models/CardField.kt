@@ -1,8 +1,6 @@
 package com.example.whitelabelexample.domain.models
 
 import com.example.whitelabelexample.R
-import org.threeten.bp.format.DateTimeFormatter
-import org.threeten.bp.format.DateTimeFormatter.ISO_LOCAL_DATE
 
 enum class CardField(
     val serverName: String,
