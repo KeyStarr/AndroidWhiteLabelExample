@@ -8,8 +8,8 @@ import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
 open class SimpleDelegatesAdapter(delegates: SparseArrayCompat<SimpleAdapterDelegate>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    protected var items = listOf<BaseDelegatesAdapterItem>()
-    protected val delegatesManager: AdapterDelegatesManager<List<BaseDelegatesAdapterItem>> = AdapterDelegatesManager()
+    private var items = listOf<BaseDelegatesAdapterItem>()
+    private val delegatesManager: AdapterDelegatesManager<List<BaseDelegatesAdapterItem>> = AdapterDelegatesManager()
 
     init {
         addDelegates(delegates)

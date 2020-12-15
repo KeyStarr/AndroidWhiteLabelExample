@@ -15,7 +15,7 @@ class GetCardUseCase(
         return if (config.isCacheCard()) {
             try {
                 val card = netRep.getCard()
-                storageRep.save(card)
+                storageRep.set(card)
                 card
             } catch (exception: Exception) {
                 return storageRep.get()?.copy(status = "Из кэша")

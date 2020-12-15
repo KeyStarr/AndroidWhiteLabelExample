@@ -20,12 +20,12 @@ abstract class ObjectPreference<T : Any>(
         } else null
     }
 
-    fun saveAsync(value: T?) {
+    fun setAsync(value: T?) {
         val json = value?.let { gson.toJson(value) }
         stringPref.setAsync(json)
     }
 
-    fun save(value: T?) {
+    fun set(value: T?) {
         val json = value?.let { gson.toJson(value) }
         stringPref.set(json)
     }

@@ -4,7 +4,7 @@ import com.example.whitelabelexample.domain.models.Card
 
 interface CardStorageRepository {
 
-    fun save(value: Card?)
+    fun set(value: Card?)
 
     fun get(): Card?
 }

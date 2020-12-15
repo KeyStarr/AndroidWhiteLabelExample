@@ -1,5 +1,6 @@
 package com.example.whitelabelexample.common.prefs
 
+import android.annotation.SuppressLint
 import android.content.SharedPreferences
 
 open class StringPreference(
@@ -15,13 +16,12 @@ open class StringPreference(
         } else null
     }
 
+    @SuppressLint("ApplySharedPref")
     fun set(value: String?){
         preferences.edit().putString(key, value).commit()
     }
 
     fun setAsync(value: String?) = preferences.edit().putString(key, value).apply()
-
-    fun delete() = preferences.edit().remove(key).apply()
 
     private fun isSet() = preferences.contains(key)
 
