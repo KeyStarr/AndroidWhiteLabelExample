@@ -8,7 +8,7 @@ android {
         loyaka {
             dimension DIMENSION_APP
 
-            resValue "string", APP_NAME_VAR, "Лояка"
+            resValue "string", APP_NAME_VAR, 'Лояка'
             applicationId BASE_PACKAGE + 'loyaka'
 
             /* MAIN SCREEN */
