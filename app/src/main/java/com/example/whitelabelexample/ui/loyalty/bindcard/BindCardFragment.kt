@@ -14,7 +14,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBindCardBinding>() {
 
-    override val viewModel : BindCardViewModel by viewModel()
+    override val viewModel: BindCardViewModel by viewModel()
 
     override fun layoutId() = R.layout.fragment_bind_card
 
@@ -33,7 +33,9 @@ class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBind
     private fun setInputMask() {
         with(bind_card_edit_text) {
             val inputMaskListener = MaskedTextChangedListener(
-                viewModel.cardNumberInputMask, this, InputChangeListener()
+                viewModel.cardNumberInputMask,
+                this,
+                InputChangeListener()
             )
             addTextChangedListener(inputMaskListener)
             onFocusChangeListener = inputMaskListener
@@ -41,7 +43,11 @@ class BindCardFragment : BaseBindingMvvmFragment<BindCardViewModel, FragmentBind
     }
 
     private inner class InputChangeListener : MaskedTextChangedListener.ValueListener {
-        override fun onTextChanged(maskFilled: Boolean, extractedValue: String, formattedValue: String) {
+        override fun onTextChanged(
+            maskFilled: Boolean,
+            extractedValue: String,
+            formattedValue: String
+        ) {
             viewModel.onInputChange(maskFilled, extractedValue)
         }
     }

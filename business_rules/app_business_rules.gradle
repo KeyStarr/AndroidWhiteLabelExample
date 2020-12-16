@@ -1,22 +1,22 @@
 /*________App Modules________*/
 
 /*__Variable__*/
-ext.VAR_APP_MODULES = "APP_MODULES"
-ext.APP_MODULES_ENUM_TYPE = "com.example.whitelabelexample.domain.models.ProjectModule"
-ext.APP_MODULES_LIST_TYPE = "java.util.List<" + APP_MODULES_ENUM_TYPE + ">"
+ext.APP_MODULES_VAR = "APP_MODULES"
+ext.APP_MODULES_ENUM = "com.example.whitelabelexample.domain.models.ProjectModule"
+ext.APP_MODULES_TYPE = "java.util.List<" + APP_MODULES_ENUM + ">"
 
-/*__Optional values__*/
-ext.LOYALTY = APP_MODULES_ENUM_TYPE + ".LOYALTY"
-ext.SHOWCASE = APP_MODULES_ENUM_TYPE + ".SHOWCASE"
-ext.SHOPS = APP_MODULES_ENUM_TYPE + ".SHOPS"
+/*__Values__*/
+ext.AM_LOYALTY = APP_MODULES_ENUM + ".LOYALTY"
+ext.AM_SHOWCASE = APP_MODULES_ENUM + ".SHOWCASE"
+ext.AM_SHOPS = APP_MODULES_ENUM + ".SHOPS"
 
 /*________Main Screen________*/
 
 /*__Variable__*/
-ext.VAR_MAIN_SCREEN = "MAIN_TAB"
-ext.VAR_MAIN_SCREEN_TYPE = "com.example.whitelabelexample.domain.models.NavigationTab"
+ext.MAIN_SCREEN_VAR = "MAIN_TAB"
+ext.MAIN_SCREEN_TYPE = "com.example.whitelabelexample.domain.models.NavigationTab"
 
-/*__Optional values__*/
-ext.MAIN_SCREEN_CARD = VAR_MAIN_SCREEN_TYPE + ".CARD"
-ext.MAIN_SCREEN_SHOWCASE = VAR_MAIN_SCREEN_TYPE + ".SHOWCASE"
-ext.MAIN_SCREEN_SHOPS = VAR_MAIN_SCREEN_TYPE + ".SHOPS"
+/*__Values__*/
+ext.MS_CARD = MAIN_SCREEN_TYPE + ".CARD"
+ext.MS_SHOWCASE = MAIN_SCREEN_TYPE + ".SHOWCASE"
+ext.MS_SHOPS = MAIN_SCREEN_TYPE + ".SHOPS"

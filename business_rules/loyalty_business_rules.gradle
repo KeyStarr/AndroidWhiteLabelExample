@@ -1,83 +1,63 @@
 /*_______________ENTER USER ID________________*/
 
-/*________User ID Type________*/
+/*________User ID________*/
 
 /*__Variable__*/
-ext.VAR_USER_ID_TYPE = "USER_ID_TYPE"
-ext.PATH_TO_USER_ID_TYPE_ENUM = "com.example.whitelabelexample.domain.models.UserIdType"
+ext.USER_ID_VAR = "USER_ID_TYPE"
+ext.USER_ID_TYPE = "com.example.whitelabelexample.domain.models.UserIdType"
 
-/*__Optional values__*/
-ext.USER_ID_TYPE_PHONE = PATH_TO_USER_ID_TYPE_ENUM + ".PHONE"
-ext.USER_ID_TYPE_EMAIL = PATH_TO_USER_ID_TYPE_ENUM + ".EMAIL"
-
-/*________User ID Regex________*/
-
-/*__Variable__*/
-ext.VAR_USER_ID_REGEX = "USER_ID_REGEX"
-
-/*__Optional values__*/
-ext.NO_USER_ID_REGEX = "null"
-ext.DEFAULT_PHONE_REGEX = "\"[+]{1}([0-9]{11})\""
-ext.DEFAULT_EMAIL_REGEX = "\"[a-zA-Z0-9+._%\\\\-]{1,256}@[a-zA-Z0-9][a-zA-Z0-9\\\\-]{0,64}(\\\\.[a-zA-Z][a-zA-Z\\\\-]{1,25})+\""
-
-/*________User ID mask________*/
-
-/*__Variable__*/
-ext.VAR_USER_ID_MASK = "USER_ID_MASK"
-
-/*__Optional values__*/
-ext.NO_USER_ID_MASK = "null"
-ext.DEFAULT_PHONE_MASK = "\"{+7} [000] [000]-[00]-[00]\""
+/*__Values__*/
+ext.UI_PHONE = USER_ID_TYPE + ".PHONE"
+ext.UI_EMAIL = USER_ID_TYPE + ".EMAIL"
 
 /*_______________NO CARD________________*/
 
 /*________Obtain card methods________*/
 
 /*__Variable__*/
-ext.VAR_OBTAIN_CARD_METHODS = "OBTAIN_CARD_METHODS"
-ext.OBTAIN_CARD_METHOD_ENUM_TYPE = "com.example.whitelabelexample.domain.models.ObtainCardMethod"
-ext.OBTAIN_CARD_METHOD_LIST_TYPE = "java.util.List<" + OBTAIN_CARD_METHOD_ENUM_TYPE + ">"
+ext.OBTAIN_METHODS_VAR = "OBTAIN_CARD_METHODS"
+ext.OBTAIN_METHODS_ENUM = "com.example.whitelabelexample.domain.models.ObtainCardMethod"
+ext.OBTAIN_METHODS_TYPE = "java.util.List<" + OBTAIN_METHODS_ENUM + ">"
 
 /*__Optional values__*/
-ext.GENERATE_VIRTUAL = OBTAIN_CARD_METHOD_ENUM_TYPE + ".GENERATE_VIRTUAL"
-ext.BIND_PHYSICAL = OBTAIN_CARD_METHOD_ENUM_TYPE + " .BIND_PHYSICAL"
+ext.OM_GENERATE = OBTAIN_METHODS_ENUM + ".GENERATE_VIRTUAL"
+ext.OM_BIND = OBTAIN_METHODS_ENUM + " .BIND_PHYSICAL"
 
 /*_______________BIND_CARD________________*/
 
 /*________Card number input mask________*/
-ext.VAR_CARD_NUMBER_MASK = "CARD_NUMBER_MASK"
+ext.CARD_NUMBER_MASK_VAR = "CARD_NUMBER_MASK"
 
 /*_______________CARD_INFO________________*/
 
 /*________Barcode type________*/
 
 /*__Variable__*/
-ext.VAR_BARCODE_TYPE = "BARCODE_TYPE"
-ext.BARCODE_TYPE_ENUM_TYPE = "com.example.whitelabelexample.domain.models.BarcodeType"
+ext.BARCODE_FORMAT_VAR = "BARCODE_TYPE"
+ext.BARCODE_FORMAT_TYPE = "com.example.whitelabelexample.domain.models.BarcodeType"
 
-/*__Optional values__*/
-ext.EAN_8 = BARCODE_TYPE_ENUM_TYPE + ".EAN_8"
-ext.EAN_13 = BARCODE_TYPE_ENUM_TYPE  + " .EAN_13"
-ext.CODE_128 = BARCODE_TYPE_ENUM_TYPE + ".CODE_128"
+/*__Values__*/
+ext.BF_EAN_8 = BARCODE_FORMAT_TYPE + ".EAN_8"
+ext.BF_EAN_13 = BARCODE_FORMAT_TYPE  + " .EAN_13"
+ext.BF_CODE_128 = BARCODE_FORMAT_TYPE + ".CODE_128"
 
 /*________Should cache card________*/
 
 /*__Variable__*/
-ext.VAR_IS_CACHE_CARD = "IS_CACHE_CARD"
-ext.IS_CACHE_CARD_TYPE = "boolean"
+ext.IS_CACHE_CARD_VAR = "IS_CACHE_CARD"
 
 /*_______________GET_CARD________________*/
 
 /*________Card fields________*/
 
 /*__Variable__*/
-ext.VAR_GENERATE_CARD_FIELDS= "GENERATE_CARD_FIELDS"
-ext.CARD_FIELD_ENUM_TYPE = "com.example.whitelabelexample.domain.models.CardField"
-ext.CARD_FIELD_LIST_TYPE = "java.util.List<" + CARD_FIELD_ENUM_TYPE + ">"
+ext.GENERATE_FIELDS_VAR = "GENERATE_CARD_FIELDS"
+ext.GENERATE_FIELDS_ENUM = "com.example.whitelabelexample.domain.models.CardField"
+ext.GENERATE_FIELDS_TYPE = "java.util.List<" + GENERATE_FIELDS_ENUM + ">"
 
-/*__Optional values__*/
-ext.FIRST_NAME = CARD_FIELD_ENUM_TYPE + ".FIRST_NAME"
-ext.LAST_NAME = CARD_FIELD_ENUM_TYPE + ".LAST_NAME"
-ext.BIRTHDAY = CARD_FIELD_ENUM_TYPE + ".BIRTHDAY"
-ext.GENDER = CARD_FIELD_ENUM_TYPE + ".GENDER"
-ext.EMAIL = CARD_FIELD_ENUM_TYPE + ".EMAIL"
+/*__Values__*/
+ext.GF_FIRST_NAME = GENERATE_FIELDS_ENUM + ".FIRST_NAME"
+ext.GF_LAST_NAME = GENERATE_FIELDS_ENUM + ".LAST_NAME"
+ext.GF_BIRTHDAY = GENERATE_FIELDS_ENUM + ".BIRTHDAY"
+ext.GF_GENDER = GENERATE_FIELDS_ENUM + ".GENDER"
+ext.GF_EMAIL = GENERATE_FIELDS_ENUM + ".EMAIL"

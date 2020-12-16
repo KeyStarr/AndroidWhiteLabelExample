@@ -1,8 +1,8 @@
 package com.example.whitelabelexample.domain.config
 
-import com.example.whitelabelexample.domain.models.UserIdParams
+import com.example.whitelabelexample.domain.models.UserIdType
 
 interface AuthConfig {
 
-    fun userIdParams(): UserIdParams
+    fun userIdType(): UserIdType
 }

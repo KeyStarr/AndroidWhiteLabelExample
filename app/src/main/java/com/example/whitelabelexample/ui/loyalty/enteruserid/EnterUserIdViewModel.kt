@@ -20,17 +20,17 @@ class EnterUserIdViewModel(
     private val router: Router
 ) : BaseViewModel() {
 
-    private val userIdParams by lazy { getUserIdParamsUseCase() }
     private var lastCorrectUserId: String? = null
 
+    val userIdType by lazy { getUserIdParamsUseCase() }
+
     val explanationResId by lazy {
-        when (userIdParams.type) {
+        when (userIdType) {
             UserIdType.PHONE -> R.string.enter_user_id_explanation_phone_number
             UserIdType.EMAIL -> R.string.enter_user_id_explanation_email
         }
     }
-    val inputMethod by lazy { userIdParams.type.name }
-    val userIdInputMask by lazy { userIdParams.mask }
+
     var isNextButtonEnabled = MutableLiveData<Boolean>().apply { value = false }
 
     fun onInputChange(maskFilled: Boolean, input: String) {

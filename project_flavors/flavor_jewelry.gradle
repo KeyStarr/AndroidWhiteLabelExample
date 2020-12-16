@@ -7,36 +7,33 @@ android {
     productFlavors {
 
         jewelry {
-            dimension APP_DIMENSION
+            dimension DIMENSION_APP
 
-            resValue "string", "app_name", "Ювалерия"
-            applicationId 'com.livetyping.jewelry'
+            resValue "string", APP_NAME_VAR, "Ювалерия"
+            applicationId BASE_PACKAGE + 'jewelry'
 
             /* MAIN SCREEN */
-            buildConfigField VAR_MAIN_SCREEN_TYPE, VAR_MAIN_SCREEN, MAIN_SCREEN_SHOPS
+            buildConfigField MAIN_SCREEN_TYPE, MAIN_SCREEN_VAR, MS_SHOPS
 
             /* MODULES */
-            buildConfigField APP_MODULES_LIST_TYPE, VAR_APP_MODULES, createJavaList(LOYALTY, SHOPS)
+            buildConfigField APP_MODULES_TYPE, APP_MODULES_VAR, createJavaList(AM_LOYALTY, AM_SHOPS)
 
             /* REGISTRATION */
-            buildConfigField PATH_TO_USER_ID_TYPE_ENUM, VAR_USER_ID_TYPE, USER_ID_TYPE_PHONE
-            buildConfigField "String", VAR_USER_ID_MASK, DEFAULT_PHONE_MASK
-            buildConfigField "String", VAR_USER_ID_REGEX, DEFAULT_PHONE_REGEX
+            buildConfigField USER_ID_TYPE, USER_ID_VAR, UI_PHONE
 
             /* NO CARD */
-            buildConfigField OBTAIN_CARD_METHOD_LIST_TYPE, VAR_OBTAIN_CARD_METHODS,
-                    createJavaList(GENERATE_VIRTUAL)
+            buildConfigField OBTAIN_METHODS_TYPE, OBTAIN_METHODS_VAR, createJavaList(OM_GENERATE)
 
             /* BIND CARD */
-            buildConfigField "String", VAR_CARD_NUMBER_MASK, "\"[0000] [0000] [0000] [0000]\""
+            buildConfigField "String", CARD_NUMBER_MASK_VAR, "\"[0000] [0000] [0000] [0000]\""
 
             /* GET CARD */
-            buildConfigField CARD_FIELD_LIST_TYPE, VAR_GENERATE_CARD_FIELDS,
-                    createJavaList(EMAIL, FIRST_NAME, LAST_NAME)
+            buildConfigField GENERATE_FIELDS_TYPE, GENERATE_FIELDS_VAR,
+                    createJavaList(GF_EMAIL, GF_FIRST_NAME, GF_LAST_NAME)
 
             /* CARD INFO */
-            buildConfigField BARCODE_TYPE_ENUM_TYPE, VAR_BARCODE_TYPE, CODE_128
-            buildConfigField IS_CACHE_CARD_TYPE, VAR_IS_CACHE_CARD, "false"
+            buildConfigField BARCODE_FORMAT_TYPE, BARCODE_FORMAT_VAR, BF_CODE_128
+            buildConfigField "boolean", IS_CACHE_CARD_VAR, "false"
         }
     }
 }

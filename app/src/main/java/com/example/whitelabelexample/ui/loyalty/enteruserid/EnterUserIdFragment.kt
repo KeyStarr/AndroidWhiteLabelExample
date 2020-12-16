@@ -31,7 +31,7 @@ class EnterUserIdFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBar()
-        setInputMaskAndChangeListener(viewModel.userIdInputMask)
+        setInputMaskAndChangeListener(viewModel.userIdType.mask)
         setOnEnterNextListener()
     }
 

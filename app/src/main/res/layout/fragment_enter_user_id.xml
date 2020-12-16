@@ -112,7 +112,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/enter_user_id_card_image_view"
                     app:layout_constraintVertical_bias="@dimen/user_id_input_field_vertical_bias"
-                    app:userIdType="@{viewModel.inputMethod}" />
+                    app:userIdType="@{viewModel.userIdType.name}" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

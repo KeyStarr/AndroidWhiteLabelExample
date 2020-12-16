@@ -13,17 +13,18 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/imagination_meme" />
+
     <TextView
         style="@style/Bold.Primary.20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/placeholder_showcase" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:src="@drawable/imagination_meme" />
+        android:text="@string/placeholder_showcase" />
 
     <Space
         android:layout_width="wrap_content"

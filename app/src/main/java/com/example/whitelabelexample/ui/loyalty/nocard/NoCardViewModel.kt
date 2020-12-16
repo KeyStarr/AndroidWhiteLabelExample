@@ -23,7 +23,7 @@ class NoCardViewModel(
     private val router: Router
 ) : BaseViewModel() {
 
-    private val userIdParams by lazy { getUserIdParamsUseCase() }
+    private val userIdType by lazy { getUserIdParamsUseCase() }
     private val cardObtainMethods by lazy { getObtainMethodsUseCase() }
 
     val isShowGetVirtualButton by lazy {
@@ -33,7 +33,7 @@ class NoCardViewModel(
         cardObtainMethods.contains(ObtainCardMethod.BIND_PHYSICAL)
     }
     val rationaleMsgResId by lazy {
-        when (userIdParams.type) {
+        when (userIdType) {
             UserIdType.PHONE -> R.string.no_card_for_phone_number_text
             UserIdType.EMAIL -> R.string.no_card_for_email_number_text
         }
@@ -49,7 +49,7 @@ class NoCardViewModel(
     }
 
     private fun formatUserId(value: String) =
-        userIdParams.mask?.let { Mask(it).format(value) } ?: value
+        userIdType.mask?.let { Mask(it).format(value) } ?: value
 
     fun onBindCardClick() {
         val screen = ProjectScreen.BindCard()

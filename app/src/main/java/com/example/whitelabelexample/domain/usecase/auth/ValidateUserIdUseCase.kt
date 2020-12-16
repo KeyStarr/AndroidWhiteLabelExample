@@ -7,7 +7,7 @@ class ValidateUserIdUseCase(
 ) {
 
     private val regex by lazy {
-        configRep.userIdParams().regex?.let { Regex(it) }
+        configRep.userIdType().regex?.let { Regex(it) }
     }
 
     operator fun invoke(input: String) = regex?.let { input.matches(it) } ?: true
