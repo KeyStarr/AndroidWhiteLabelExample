@@ -3,15 +3,12 @@
 android {
     ext.DIMENSION_APP = "app"
     ext.APP_NAME_VAR = "app_name"
-    ext.BASE_PACKAGE = "com.livetyping"
+    ext.BASE_PACKAGE = "com.livetyping."
 
     productFlavors {
-        ext.VAR_CLIENT_API_KEY = "CLIENT_API_KEY" // TODO: use
-
         // export methods as closures
         ext.list = this.&list
     }
-
 }
 
 /*_______________HELPER METHODS________________*/

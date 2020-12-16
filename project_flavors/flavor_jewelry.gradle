@@ -9,7 +9,7 @@ android {
         jewelry {
             dimension DIMENSION_APP
 
-            resValue "string", APP_NAME_VAR, "Ювалерия"
+            resValue "string", APP_NAME_VAR, "Ювелирия"
             applicationId BASE_PACKAGE + 'jewelry'
 
             /* MAIN SCREEN */
