@@ -15,20 +15,20 @@ android {
             buildConfigField MAIN_SCREEN_TYPE, MAIN_SCREEN_VAR, MS_CARD
 
             /* MODULES */
-            buildConfigField APP_MODULES_TYPE, APP_MODULES_VAR, createJavaList(AM_LOYALTY, AM_SHOWCASE)
+            buildConfigField APP_MODULES_TYPE, APP_MODULES_VAR, list(AM_LOYALTY, AM_SHOWCASE)
 
             /* REGISTRATION */
             buildConfigField USER_ID_TYPE, USER_ID_VAR, UI_EMAIL
 
             /* NO CARD */
-            buildConfigField OBTAIN_METHODS_TYPE, OBTAIN_METHODS_VAR, createJavaList(OM_BIND, OM_GENERATE)
+            buildConfigField OBTAIN_METHODS_TYPE, OBTAIN_METHODS_VAR, list(OM_BIND, OM_GENERATE)
 
             /* BIND CARD */
             buildConfigField "String", CARD_NUMBER_MASK_VAR, "\"[000] [0000] [0000] [0000] [0000]\""
 
             /* GET CARD */
             buildConfigField GENERATE_FIELDS_TYPE, GENERATE_FIELDS_VAR,
-                    createJavaList(GF_FIRST_NAME, GF_LAST_NAME, GF_BIRTHDAY, GF_GENDER)
+                    list(GF_FIRST_NAME, GF_LAST_NAME, GF_BIRTHDAY, GF_GENDER)
 
             /* CARD INFO */
             buildConfigField BARCODE_FORMAT_TYPE, BARCODE_FORMAT_VAR, BF_CODE_128

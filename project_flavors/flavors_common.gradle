@@ -9,14 +9,14 @@ android {
         ext.VAR_CLIENT_API_KEY = "CLIENT_API_KEY" // TODO: use
 
         // export methods as closures
-        ext.createJavaList = this.&createJavaList
+        ext.list = this.&list
     }
 
 }
 
 /*_______________HELPER METHODS________________*/
 
-static def createJavaList(String... elements) {
+static def list(String... elements) {
     def result = new StringBuilder()
     result.append("java.util.Arrays.asList(")
     def listIterator = elements.iterator()
