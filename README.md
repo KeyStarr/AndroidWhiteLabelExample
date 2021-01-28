@@ -13,12 +13,12 @@ give a comprehensive understanding of the mechanism.
 ## General
 As described in the article, to create a new app one needs to add a new flavor script and set it up, that includes:
 * providing a config:
-    * enabled modules and a start screen;
-    * all screen's features.
+    * select modules and a start screen;
+    * select specific screen's features.
 * branding: override resources such as colors and images in a flavor specific folder.
 
-## Specific screens
-We only have one functional module - loyalty, it includes these screens:
+## Screen features
+Here we only have one functional module - loyalty, it includes these screens:
 1. **Enter user id** - a stub for authorization. Can be configured to accept either email or a phone number. 
     ![Screen comprasion](./docs-images/1_enter_user_id.png)
 
