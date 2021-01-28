@@ -1,4 +1,4 @@
-# Context
+## Context
 This sample project illustrates a systematic approach towards building a White Label android solution. 
 It accompanies an article which describes all major decisions in great detail:
 * in russian (habr, TBD)
@@ -6,18 +6,16 @@ It accompanies an article which describes all major decisions in great detail:
 
 Initially this approach was designed for the "Loyaka" system by Dmitry Alexeenkoff and myself, while working for the "LiveTyping" studios.
 
-# App features
+## App features
 This app is a greatly reduced version of the real Loyaka. The goal was to provide the minimum amount of features to 
 give a comprehensive understanding of the mechanism. 
 
-## General
+### General
 As described in the article, to create a new app one needs to add a new flavor script and set it up, that includes:
-* providing a config:
-    * select modules and a start screen;
-    * select specific screen's features.
+* providing a config: select enabled modules, a start screen and specific screen's features.
 * branding: override resources such as colors and images in a flavor specific folder.
 
-## Screen features
+### Screens
 Here we only have one functional module - loyalty, it includes these screens:
 1. **Enter user id** - a stub for authorization. Can be configured to accept either email or a phone number. 
 
@@ -39,27 +37,18 @@ Here we only have one functional module - loyalty, it includes these screens:
 
 ![Screen comprasion](./docs-images/5_card.png)
 
-# Implementation details
+## Implementation 
 
-I'll briefly cover project's stack and some of the article's key points.
+Details can be found in the article, here I'll just highlight a few key points.
 
-## Architecture
+### General
 
-### Code
-- excepctions / loadings were cut
+* Architecture - single module with organization by layers via the Clean Architecture approach, UI layer via MVVM;
+* White Label - codebase reuse mechanism via Gradle Product Flavors, configs via Gradle BuildConfig;
+* Flows - for the sake of simplicity all exception handling and loadings were cut out. Some non-relevant features
+like sms-confirmation were also left out;
 
-### White Label
-White Label product means we have to generate multiple apps from a single codebase. Variations include branding and available features.
-
-As described in the article, this requires to solve four tasks:
-1. how to organizer codebase?
-
-### Layers
-
-### Modules
-
-
-## Tech stack
+### Tech stack
 Pretty standard, nothing curious:
 * Language - Kotlin
 * SDK & views - AndroidX
