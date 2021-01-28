@@ -20,19 +20,24 @@ As described in the article, to create a new app one needs to add a new flavor s
 ## Screen features
 Here we only have one functional module - loyalty, it includes these screens:
 1. **Enter user id** - a stub for authorization. Can be configured to accept either email or a phone number. 
-    ![Screen comprasion](./docs-images/1_enter_user_id.png)
+
+![Screen comprasion](./docs-images/1_enter_user_id.png)
 
 2. **No card** - a user is authorized, but has no cards. He is offered to attach one via available methods. 
-    ![Screen comprasion](./docs-images/2_no_card.png)
+
+![Screen comprasion](./docs-images/2_no_card.png)
 
 3. **Attach a card** - a user has a plastic card and wants to attach it to the app. Card number's mask can be configured.
-    ![Screen comprasion](./docs-images/3_attach_card.png)
+
+![Screen comprasion](./docs-images/3_attach_card.png)
 
 4. **Generate a card** - a user doesn't have a card and wants to create one. All required fields are configurable. 
-    ![Screen comprasion](./docs-images/4_generate_card.png)
+
+![Screen comprasion](./docs-images/4_generate_card.png)
 
 5. **Card Info** - a user wants to check their card balance. UI is adapting to the available data as loyalty programs can be quite different.
-    ![Screen comprasion](./docs-images/5_card.png)
+
+![Screen comprasion](./docs-images/5_card.png)
 
 # Implementation details
 
