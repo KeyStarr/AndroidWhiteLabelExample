@@ -3,7 +3,7 @@
 /*________User ID________*/
 
 /*__Variable__*/
-ext.USER_ID_VAR = "USER_ID_TYPE"
+ext.USER_ID_VAR = "USER_ID"
 ext.USER_ID_TYPE = "com.example.whitelabelexample.domain.models.UserIdType"
 
 /*__Values__*/

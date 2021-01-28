@@ -6,5 +6,5 @@ import com.example.whitelabelexample.domain.models.UserIdType
 
 class BuildAuthConfig : AuthConfig {
 
-    override fun userIdType(): UserIdType = BuildConfig.USER_ID_TYPE
+    override fun userIdType(): UserIdType = BuildConfig.USER_ID
 }
