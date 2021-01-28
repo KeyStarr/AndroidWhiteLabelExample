@@ -18,7 +18,7 @@
             style="@style/WhiteToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Получить карту" />
+            app:title="@string/get_card_title" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"

@@ -21,7 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="Привязать карту" />
+            app:title="@string/bind_card_title" />
 
         <TextView
             android:id="@+id/bind_card_label_text_view"

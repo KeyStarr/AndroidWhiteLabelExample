@@ -12,13 +12,13 @@ class MockCardNetRepository(private val netConnectionChecker: NetConnectionCheck
     companion object {
         private val mockCardFull = Card(
             "123 45678 1234 5678 1234",
-            "Из сети",
+            "From server",
             25,
             1000
         )
         private val mockCardShort = Card(
             "1312 5435 7654 4234",
-            "Из сети",
+            "From server",
             null,
             33
         )

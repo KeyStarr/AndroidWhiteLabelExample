@@ -9,7 +9,7 @@ android {
         jewelry {
             dimension DIMENSION_APP
 
-            resValue "string", APP_NAME_VAR, 'Ювелирия'
+            resValue "string", APP_NAME_VAR, 'Jewelry'
             applicationId BASE_PACKAGE + 'jewelry'
 
             /* MAIN SCREEN */
@@ -22,13 +22,13 @@ android {
             buildConfigField USER_ID_TYPE, USER_ID_VAR, UI_PHONE
 
             /* NO CARD */
-            buildConfigField OBTAIN_METHODS_TYPE, OBTAIN_METHODS_VAR, list(OM_GENERATE)
+            buildConfigField OBTAIN_METHODS_TYPE, OBTAIN_METHODS_VAR, list(OM_BIND)
 
             /* BIND CARD */
             buildConfigField "String", CARD_NUMBER_MASK_VAR, "\"[0000] [0000] [0000] [0000]\""
 
             /* GET CARD */
-            buildConfigField GENERATE_FIELDS_TYPE, GENERATE_FIELDS_VAR, list(GF_EMAIL, GF_FIRST_NAME, GF_LAST_NAME)
+            buildConfigField GENERATE_FIELDS_TYPE, GENERATE_FIELDS_VAR, list(GF_EMAIL, GF_FIRST_NAME)
 
             /* CARD INFO */
             buildConfigField BARCODE_FORMAT_TYPE, BARCODE_FORMAT_VAR, BF_CODE_128

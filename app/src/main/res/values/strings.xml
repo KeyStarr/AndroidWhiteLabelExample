@@ -4,52 +4,53 @@
     <string name="brand_name" />
 
     <!-- No card-->
-    <string name="no_card_for_phone_number_text">К номеру &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
-    <string name="no_card_for_email_number_text">К email-адресу &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
-    <string name="no_card_attach_card_text">Привяжите пластиковую карту, если она у вас есть, или заведите виртуальную. Пусть карта всегда будет с вами!</string>
-    <string name="attach_card_button_text">Привязать пластиковую карту</string>
-    <string name="get_card_button_text">Получить виртуальную карту</string>
+    <string name="no_card_for_phone_number_text">A number &lt;b>%1$s&lt;/b> has no cards attached</string>
+    <string name="no_card_for_email_number_text">An email &lt;b>%1$s&lt;/b> has no cards attached</string>
+    <string name="no_card_attach_card_text">Attach a plastic card if you have one. It will be always at hand!</string>
+    <string name="attach_card_button_text">Attach a plastic card</string>
+    <string name="get_card_button_text">Generate a virtual card</string>
 
     <!-- Enter UserId -->
-    <string name="enter_user_id_title">Карта</string>
-    <string name="enter_user_id_my_card">Моя карта</string>
-    <string name="enter_user_id_explanation_phone_number">Введите номер телефона, чтобы привязать или получить дисконтную карту</string>
-    <string name="enter_user_id_explanation_email">Введите адрес email, чтобы привязать или получить дисконтную карту</string>
-    <string name="enter_user_id_done_button_text">Далее</string>
+    <string name="enter_user_id_title">Card</string>
+    <string name="enter_user_id_my_card">My card</string>
+    <string name="enter_user_id_explanation_phone_number">Enter your phone number to attach or generate a discount card</string>
+    <string name="enter_user_id_explanation_email">Enter your email to attach or generate a discount card</string>
+    <string name="enter_user_id_done_button_text">Next</string>
 
     <!-- Get virtual card -->
-    <string name="get_card_next_button_text">Далее</string>
+    <string name="get_card_title">Generate a card</string>
+    <string name="get_card_next_button_text">Next</string>
     <string name="get_card_gender_empty">""</string>
 
     <!-- Bind card -->
-    <string name="bind_card_title_text">Введите номер карты</string>
-    <string name="bind_card_edit_text_hint">Номер карты</string>
-    <string name="bind_card_next_button_text">Далее</string>
-    <string name="card_first_name">Имя</string>
-    <string name="card_last_name">Фамилия</string>
-    <string name="card_birthday">Дата рождения</string>
-    <string name="card_gender">Пол</string>
-    <string name="card_email">E-mail</string>
-    <string name="card_gender_male">Мужской</string>
-    <string name="card_gender_female">Женский</string>
+    <string name="bind_card_title">Attach a card</string>
+    <string name="bind_card_title_text">Enter a card number</string>
+    <string name="bind_card_edit_text_hint">Card number</string>
+    <string name="bind_card_next_button_text">Next</string>
+    <string name="card_first_name">Name</string>
+    <string name="card_last_name">Last Name</string>
+    <string name="card_birthday">Date of birth</string>
+    <string name="card_gender">Gender</string>
+    <string name="card_email">Email</string>
+    <string name="card_gender_male">Male</string>
+    <string name="card_gender_female">Female</string>
 
     <!-- Card info -->
-    <string name="card_info_status_label_text">Статус карты</string>
+    <string name="card_info_status_label_text">Card status</string>
     <string name="card_info_discount_percent_text">%1$d%%</string>
     <string name="card_info_balance_at_balance_text">%1$d %2$s</string>
     <plurals name="card_info_bonuses_word">
-        <item quantity="zero">бонусов</item>
-        <item quantity="one">бонус</item>
-        <item quantity="two">бонуса</item>
-        <item quantity="few">бонусов</item>
-        <item quantity="many">бонусов</item>
-        <item quantity="other">бонусов</item>
+        <item quantity="zero">bonuses</item>
+        <item quantity="one">bonus</item>
+        <item quantity="two">bonuses</item>
+        <item quantity="few">bonuses</item>
+        <item quantity="many">bonuses</item>
+        <item quantity="other">bonuses</item>
     </plurals>
-    <string name="card_info_barcode_content_desc">Штрихкод, в котором закодирован код Вашей карты</string>
+    <string name="card_info_barcode_content_desc">A barcode which is an encoded representation of your card number</string>
 
     <!-- Placeholders  -->
-    <string name="placeholder_card_info_empty_error">You did it!\nКарты нет по одной из причин:\n1) кэш выключен;\n2) нет сети, а кэш пустой.</string>
-    <string name="placeholder_shops">Здесь магазины!</string>
-    <string name="placeholder_showcase">Здесь новости!</string>
-
+    <string name="placeholder_card_info_empty_error">You did it!\nThere is no card due to one of the reasons:\n1) cache is disabled;\n2) no network and cache is empty</string>
+    <string name="placeholder_shops">Here are the shops!</string>
+    <string name="placeholder_showcase">Here are the news!</string>
 </resources>

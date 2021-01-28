@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Resources that must be overridden -->
+    <string name="brand_name" />
+
+    <!-- No card-->
+    <string name="no_card_for_phone_number_text">К номеру &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
+    <string name="no_card_for_email_number_text">К email-адресу &lt;b>%1$s&lt;/b> не привязано ни одной карты</string>
+    <string name="no_card_attach_card_text">Привяжите пластиковую карту, если она у вас есть, или заведите виртуальную. Пусть карта всегда будет с вами!</string>
+    <string name="attach_card_button_text">Привязать пластиковую карту</string>
+    <string name="get_card_button_text">Получить виртуальную карту</string>
+
+    <!-- Enter UserId -->
+    <string name="enter_user_id_title">Карта</string>
+    <string name="enter_user_id_my_card">Моя карта</string>
+    <string name="enter_user_id_explanation_phone_number">Введите номер телефона, чтобы привязать или получить дисконтную карту</string>
+    <string name="enter_user_id_explanation_email">Введите адрес email, чтобы привязать или получить дисконтную карту</string>
+    <string name="enter_user_id_done_button_text">Далее</string>
+
+    <!-- Get virtual card -->
+    <string name="get_card_title">Получить карту</string>
+    <string name="get_card_next_button_text">Далее</string>
+    <string name="get_card_gender_empty">""</string>
+
+    <!-- Bind card -->
+    <string name="bind_card_title">Привязать карту</string>
+    <string name="bind_card_title_text">Введите номер карты</string>
+    <string name="bind_card_edit_text_hint">Номер карты</string>
+    <string name="bind_card_next_button_text">Далее</string>
+    <string name="card_first_name">Имя</string>
+    <string name="card_last_name">Фамилия</string>
+    <string name="card_birthday">Дата рождения</string>
+    <string name="card_gender">Пол</string>
+    <string name="card_email">E-mail</string>
+    <string name="card_gender_male">Мужской</string>
+    <string name="card_gender_female">Женский</string>
+
+    <!-- Card info -->
+    <string name="card_info_status_label_text">Статус карты</string>
+    <string name="card_info_discount_percent_text">%1$d%%</string>
+    <string name="card_info_balance_at_balance_text">%1$d %2$s</string>
+    <plurals name="card_info_bonuses_word">
+        <item quantity="one" tools:ignore="ImpliedQuantity">бонус</item>
+        <item quantity="few">бонусов</item>
+        <item quantity="many">бонусов</item>
+        <item quantity="other">бонусов</item>
+    </plurals>
+    <string name="card_info_barcode_content_desc">Штрихкод, в котором закодирован код Вашей карты</string>
+
+    <!-- Placeholders  -->
+    <string name="placeholder_card_info_empty_error">You did it!\nКарты нет по одной из причин:\n1) кэш выключен;\n2) нет сети, а кэш пустой.</string>
+    <string name="placeholder_shops">Здесь магазины!</string>
+    <string name="placeholder_showcase">Здесь новости!</string>
+
+</resources>
