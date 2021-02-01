@@ -57,4 +57,4 @@ Pretty standard, nothing curious:
 * Service locator: Koin
 * Network: Okhttp + Retrofit
 * Images: Glide
-* Other libs for small specific tasks like barcode.
+* Other libs for small specific tasks like displaying the barcode.
