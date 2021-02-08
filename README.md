@@ -10,7 +10,7 @@ Initially this approach was designed for the "Loyaka" system by Dmitry Alexeenko
 This app is a greatly reduced version of the real Loyaka. The goal was to provide the minimum amount of features to 
 give a comprehensive understanding of the mechanism. 
 
-## General
+## White Label
 As described in the article, to create a new app one needs to add a new flavor script and set it up, that includes:
 * **providing a config** — select modules, a start screen and specific screen's features.
 * **branding** — override resources such as colors and images in a flavor specific folder.
@@ -45,8 +45,8 @@ Details can be found in the article, here I'll just highlight a few key points.
 
 * **Architecture** — single module with organization by layers via the Clean Architecture approach, UI layer via MVVM;
 * **White Label** — codebase reuse mechanism via Gradle Product Flavors, configs via Gradle BuildConfig;
-* **Flows** — for the sake of simplicity all exception handling and loadings were cut out *(some non—relevant features
-like sms—confirmation were also left out)*.
+* **Flows** — for the sake of simplicity all exception handling and loadings were cut out *(some non-relevant features
+like sms-confirmation were also left out)*.
 
 ## Tech stack
 Pretty standard, nothing curious:
