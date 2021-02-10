@@ -1,7 +1,7 @@
 # Context
 This sample project illustrates a systematic approach towards building a White Label android solution. 
 It accompanies an article which describes all major decisions in great detail:
-* in russian (habr, TBD)
+* [in russian](https://habr.com/ru/post/541204/)
 * in english (TBD)
 
 Initially this approach was designed for the "Loyaka" system by Dmitry Alexeenkoff and myself, while working for the "LiveTyping" studios.
